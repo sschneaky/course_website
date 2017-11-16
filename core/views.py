@@ -1,21 +1,30 @@
 from django.shortcuts import render
+from django.views.generic.list import ListView
 from django.views.generic import ListView
+from django.utils import timezone
 
+from .models import ClassPeriod
 # Create your views here.
 
-def calendar(request):
-	return render(request, "calendar.html")
+class CalendarListView(ListView):
 
+	model = ClassPeriod
 
-def projects(request):
+	def get_context_data(self, **kwargs):
+		context = super(CalendarListView, self).get_context_data(**kwargs)
+		context['now'] = timezone.now()
+		return context
+
+	template_name = 'calendar.html'
+
+def Projects(request):
 	return render(request, "projects.html")
 
-
-def course(request):
+def Course(request):
 	return render(request, "course.html")
 
-def piazza(request):
+def Piazza(request):
 	return render(request, "piazza.html")
 
-def blackboard(request):
+def Blackboard(request):
 	return render(request, "blackboard.html")

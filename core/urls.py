@@ -21,9 +21,9 @@ from . import views
 urlpatterns = [
 
     url(r'^$', RedirectView.as_view(url='/calendar')),
-    url(r'^calendar', views.calendar, name='calendar'),
-    url(r'^course', views.course, name='course'),
-    url(r'^projects', views.projects, name='projects'),
-    url(r'^piazza', views.piazza, name='piazza'),
-    url(r'^blackboard', views.blackboard, name='blackboard'),
+    url(r'^calendar', views.CalendarListView.as_view(), name='calendar'),
+    url(r'^course', views.Course, name='course'),
+    url(r'^projects', views.Projects, name='projects'),
+    url(r'^piazza', views.Piazza, name='piazza'),
+    url(r'^blackboard', views.Blackboard, name='blackboard'),
 ]
