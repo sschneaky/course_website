@@ -5,7 +5,8 @@
 		
 		{# Today Cal #}
 
-		<h3>Today - {{now|date:'Y-m-d'}}</h3>
+		<h3><a href="#today">Next Class</a> : {{next_class.date|date:'Y-m-d'}} </h3>
+
 		<hr>
 			<div class="row">
 				<div class="col-12">
@@ -19,24 +20,37 @@
 						    </tr>
 						  </thead>
 						  <tbody>
-						  	{% for cp in object_list %}
-						  	{% if cp.date|date:'Y-m-d' == now|date:'Y-m-d'%}
 						    <tr>
-						      <th scope="row"> {{cp.date|date}} </th>
-						      <td><a href="{{cp.slide_url}}">{{cp.slide}}</a></td>
-						      <td><a href="{{cp.reading_url}}">{{cp.reading}}</a></td>
-						      <td><a href="{{cp.events_url}}">{{cp.events}}</a></td>
-						    </tr>
-							{% endif %}	
-							{% endfor %}	
-						    
+						      <th scope="row"> {{next_class.date|date}} </th>
+						      <td>
+						      	{% if next_class.url %}
+						      		<a href="{{next_class.url}}">{{next_class.title}}</a>
+						      	{% else %}
+						      		{{next_class.title}}
+						      	{% endif %}
+						      </td>
+						      <td>
+						      	{% for reading in next_class.reading_set.all %}
+						      		<a href="{{reading.url}}" target="_blank">{{reading.title}}</a>
+						      	{% endfor %}
+						      </td>
+						      <td>
+						      	{% for event in next_class.event_set.all %}
+						      		<a href="{{event.url}}">{{event.title}}</a>
+						      	{% endfor %}
+						      </td>
+						    </tr> 
 						  </tbody>
 					</table>
 				</div>
 			</div>
-		<hr>
+
+		<br>
 
 		{# Main Cal #}
+		<h3>Calendar</h3>	
+		<hr> 
+
 		<div class="row">
 			<div class="col-12">
 				<table class="table table-striped">
@@ -51,10 +65,29 @@
 					  <tbody>
 					  	{% for cp in object_list %}
 					    <tr>
-					      <th scope="row"> {{cp.date|date}} </th>
-					      <td><a href="{{cp.slide_url}}">{{cp.slide}}</a></td>
-					      <td><a href="{{cp.reading_url}}">{{cp.reading}}</a></td>
-					      <td><a href="{{cp.events_url}}">{{cp.events}}</a></td>
+					    	{% if cp == next_class %}
+					    		<th scope="row" id="today"> {{cp.date|date}} </th>
+					    	{% else %}
+					    		<td scope="row"> {{cp.date|date}} </td>
+					    	{% endif %}
+					      
+					      <td>
+					      	{% if cp.url %}
+					      		<a href="{{cp.url}}">{{cp.title}}</a>
+					      	{% else %}
+					      		{{cp.title}}
+					      	{% endif %}
+					      </td>
+					      <td>
+					      	{% for reading in cp.reading_set.all %}
+					      		<div><a href="{{reading.url}}" target="_blank">{{reading.title}}</a></div>
+					      	{% endfor %}
+					      </td>
+					      <td>
+					      	{% for event in cp.event_set.all %}
+					      		<a href="{{event.url}}">{{event.title}}</a>
+					      	{% endfor %}
+					      </td>
 					    </tr>
 						{% endfor %}		
 					    

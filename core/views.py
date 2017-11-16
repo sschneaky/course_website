@@ -13,6 +13,7 @@ class CalendarListView(ListView):
 	def get_context_data(self, **kwargs):
 		context = super(CalendarListView, self).get_context_data(**kwargs)
 		context['now'] = timezone.now()
+		context['next_class'] = ClassPeriod.objects.filter(date__gte=timezone.now()).first()
 		return context
 
 	template_name = 'calendar.html'
@@ -28,3 +29,4 @@ def Piazza(request):
 
 def Blackboard(request):
 	return render(request, "blackboard.html")
+
