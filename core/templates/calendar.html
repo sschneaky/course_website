@@ -5,18 +5,19 @@
 		
 		{# Today Cal #}
 
-		<h3><a href="#today">Next Class</a> : {{next_class.date|date:'Y-m-d'}} </h3>
+		<h5><a href="#today">Next Class</a> : {{next_class.date|date:'Y-m-d'}} </h5>
 
 		<hr>
+			<div class="container-fluid">
 			<div class="row">
 				<div class="col-12">
 					<table class="table table-striped">
 						  <thead class="thead-light">
 						    <tr>
-						      <th scope="col">Date</th>
-						      <th scope="col">Lecture Topics</th>
-						      <th scope="col">Readings For Today</th>
-						      <th scope="col">Events</th>
+						      <th class="col-2" scope="col">Date</th>
+						      <th class="col-2" scope="col">Lecture Topics</th>
+						      <th class="col-5" scope="col">Readings For Today</th>
+						      <th class="col-3" scope="col">Events</th>
 						    </tr>
 						  </thead>
 						  <tbody>
@@ -30,19 +31,25 @@
 						      	{% endif %}
 						      </td>
 						      <td>
+						      	<ul>
 						      	{% for reading in next_class.reading_set.all %}
-						      		<a href="{{reading.url}}" target="_blank">{{reading.title}}</a>
+						      		<li><a href="{{reading.url}}" target="_blank">{{reading.title}}</a></li>
 						      	{% endfor %}
+						      	</ul>
 						      </td>
 						      <td>
 						      	{% for event in next_class.event_set.all %}
 						      		<a href="{{event.url}}">{{event.title}}</a>
 						      	{% endfor %}
+						      	{% if next_class.reading_set.all %}
+						      		<div><a href="submit.html" target="_blank">Submit Reading: {{next_class.title}}</a></div>
+						      	{% endif %}
 						      </td>
 						    </tr> 
 						  </tbody>
 					</table>
 				</div>
+			</div>
 			</div>
 
 		<br>
@@ -51,15 +58,16 @@
 		<h3>Calendar</h3>	
 		<hr> 
 
+		<div class="container-fluid">
 		<div class="row">
 			<div class="col-12">
 				<table class="table table-striped">
 					  <thead class="thead-light">
 					    <tr>
-					      <th scope="col">Date</th>
-					      <th scope="col">Lecture Topics</th>
-					      <th scope="col">Readings For Today</th>
-					      <th scope="col">Events</th>
+					      <th class="col-2" scope="col">Date</th>
+					      <th class="col-2"scope="col">Lecture Topics</th>
+					      <th class="col-5"scope="col">Readings For Today</th>
+					      <th class="col-3" scope="col">Events</th>
 					    </tr>
 					  </thead>
 					  <tbody>
@@ -79,14 +87,21 @@
 					      	{% endif %}
 					      </td>
 					      <td>
+					      	<ul>
 					      	{% for reading in cp.reading_set.all %}
-					      		<div><a href="{{reading.url}}" target="_blank">{{reading.title}}</a></div>
+					      		<li><a href="{{reading.url}}" target="_blank">{{reading.title}}</a></li>
 					      	{% endfor %}
+					      	</ul>
 					      </td>
 					      <td>
+					      	<ul>
 					      	{% for event in cp.event_set.all %}
-					      		<a href="{{event.url}}">{{event.title}}</a>
+					      		<li><a href="{{event.url}}">{{event.title|upper}}</a></li>
 					      	{% endfor %}
+					      	{% if cp.reading_set.all %}
+					      		<li><a href="submit.html" target="_blank">Submit Reading: {{cp.title}}</a></li>
+					      	{% endif %}
+					      	</ul>
 					      </td>
 					    </tr>
 						{% endfor %}		
@@ -94,6 +109,7 @@
 					  </tbody>
 				</table>
 			</div>
+		</div>
 		</div>
 	
 {% endblock core %}
