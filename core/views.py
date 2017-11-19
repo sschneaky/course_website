@@ -30,3 +30,6 @@ def Piazza(request):
 def Blackboard(request):
 	return render(request, "blackboard.html")
 
+def Submit(request):
+	return render(request, "submit.html")
+

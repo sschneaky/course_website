@@ -26,4 +26,5 @@ urlpatterns = [
     url(r'^projects', views.Projects, name='projects'),
     url(r'^piazza', views.Piazza, name='piazza'),
     url(r'^blackboard', views.Blackboard, name='blackboard'),
+    url(r'^submit', views.Submit, name='submit'),
 ]

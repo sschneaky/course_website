@@ -1,0 +1,858 @@
+<html lang="en-US"><head>
+  <title>Upload Assignment:</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta id="request-method" name="request-method" content="GET">
+  <meta name="author" content="Blackboard">
+  <meta name="copyright" content="© 1997-2017 Blackboard Inc. All Rights Reserved. U.S. Patent No. 7,493,396 and 7,558,853. Additional Patents Pending.">
+  <meta name="keywords" content="Blackboard">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="-1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  
+
+  <link rel="SHORTCUT ICON" type="image/x-icon" href="https://d1e7kr0efngifs.cloudfront.net/3300.2.0-rel.25+dcb5a17/ui/bb-icon2.ico">
+     <link rel="stylesheet" type="text/css" href="https://d1e7kr0efngifs.cloudfront.net/3300.2.0-rel.25+dcb5a17/common/shared.css?v=3300.2.0-rel.25+dcb5a17" id="css_0">
+     <link rel="stylesheet" type="text/css" href="https://d1e7kr0efngifs.cloudfront.net/3300.2.0-rel.25+dcb5a17/themes/as_2015/theme.css?v=3300.2.0-rel.25+dcb5a17" id="css_1">
+     <link rel="stylesheet" type="text/css" href="https://d1e7kr0efngifs.cloudfront.net/3300.2.0-rel.25+dcb5a17/themes/as_2015/app_nav.css?v=3300.2.0-rel.25+dcb5a17" id="css_2">
+     <link rel="stylesheet" type="text/css" href="/webapps/assignment/css/assignment.css?v=3300.2.0-rel.25+dcb5a17" id="css_3">
+     <link rel="stylesheet" type="text/css" href="/webapps/portfolio/css/portfolio.css?v=3300.2.0-rel.25+dcb5a17" id="css_4">
+     <link rel="stylesheet" type="text/css" href="/webapps/retention/css/myblackboard_icon.css?v=3300.2.0-rel.25+dcb5a17" id="css_5">
+     <link rel="stylesheet" type="text/css" href="/webapps/cloud-profiles/css/opt_in_lightbox.css?b2=3300.2.0-rel.25+dcb5a17&amp;v=3300.2.0-rel.25+dcb5a17" id="css_6">
+          <style type="text/css" id="courseMenuCustomCSS">
+
+.noteditmode .listCm .courseMenu a:hover span, 
+.noteditmode .listCm .courseMenu a:focus span {
+	color:#FFFFFF!important;
+}
+
+
+#courseMenuPalette div.navPaletteContent ul li a,
+#courseMenuPalette h3 a,
+#previewCourseMenu h3 a,
+.navPaletteContent h3 a.submenuLink:before,
+.navPaletteContent h3 a.submenuLink_active:before,
+#courseMenuPalette div.navPaletteContent ul li a span,
+#courseMenuPalette .navPaletteContent .subhead
+{
+  color: #FFFFFF;
+  text-shadow: none;
+}
+
+#courseMenuPalette ul.courseMenu li.divider hr
+{
+  background-color: #FFFFFF;
+}
+
+#courseMenuPalette ul.courseMenu li h4
+{
+  color: #FFFFFF;
+}
+
+#courseMenuPalette h4.treehead
+{
+  color: #FFFFFF;
+}
+
+#courseMenuPalette div.navPaletteContent
+{
+  background-color: #990000;
+}
+
+/*Active course menu view bubble stem*/
+#courseMenuPalette .actionBarMicro .active > a:after {
+ 	border-bottom-color: #990000;
+}
+
+
+</style>
+      <style type="text/css">.topGlobalLinks a.home{background-image:url(https://d1e7kr0efngifs.cloudfront.net/3300.2.0-rel.25+dcb5a17/images/console/icons/home_0.gif)}.bottom-buttons-home a{background-image:url(https://d1e7kr0efngifs.cloudfront.net/3300.2.0-rel.25+dcb5a17/images/console/icons/home_0.gif);background-repeat:no-repeat;background-position:50% 0}.topGlobalLinks a.help{background-image:url(https://d1e7kr0efngifs.cloudfront.net/3300.2.0-rel.25+dcb5a17/images-ltr/console/icons/help_0.gif)}.bottom-buttons-help a{background-image:url(https://d1e7kr0efngifs.cloudfront.net/3300.2.0-rel.25+dcb5a17/images-ltr/console/icons/help_0.gif);background-repeat:no-repeat;background-position:50% 0}.topGlobalLinks a.logout{background-image:url(https://d1e7kr0efngifs.cloudfront.net/3300.2.0-rel.25+dcb5a17/images/console/icons/logout_0.gif)}.global-nav-bar .logout-link,.global-nav-bar .logout-link:hover,.global-nav-bar .logout-link:focus{background-image:url(https://d1e7kr0efngifs.cloudfront.net/3300.2.0-rel.25+dcb5a17/images/console/icons/logout_0.gif);background-repeat:no-repeat;background-position:50% 0}</style>
+       <link rel="stylesheet" type="text/css" media="print" href="https://d1e7kr0efngifs.cloudfront.net/3300.2.0-rel.25+dcb5a17/ui/styles/print.css?v=3300.2.0-rel.25+dcb5a17">
+    
+      <script language="javascript" type="text/javascript">
+
+var JS_RESOURCES = new Object();
+
+function _init_bundle_JS_RESOURCES() {
+
+    JS_RESOURCES['validation.email'] = 'A fully qualified email address (for example, info@blackboard.com) must be entered.';
+    JS_RESOURCES['validation.radio.required'] = 'Make a selection to continue.';
+    JS_RESOURCES['assessment.incomplete.confirm.backtrackProhibited.survey'] = 'The following questions may be incomplete:\n {0}\nClick cancel to return to the survey. Click Ok to save the incomplete answer.';
+    JS_RESOURCES['common.list.separator.comma'] = '{0}, {1}';
+    JS_RESOURCES['active.filter.search.terms'] = 'Search Terms';
+    JS_RESOURCES['validation.maximum_length.plural'] = 'Must not contain more than {1} characters: {0}.\nReduce the size of the input by {2} characters.';
+    JS_RESOURCES['assessment.incomplete.confirm.backtrackProhibited'] = 'The following questions may be incomplete:\n {0}\nClick cancel to return to the test. Click Ok to save the incomplete answer.';
+    JS_RESOURCES['validation.multiSelect.minItems'] = 'Multiselect box should contain at least {0} number of items.';
+    JS_RESOURCES['validation.cmp_field.required'] = 'A value must be provided for {0}\nwhen {1} field is not empty';
+    JS_RESOURCES['warning.email'] = 'Email address is a recommended field. Users will be unable to use parts of the system without an email address.';
+    JS_RESOURCES['validation.maximum_length.no_name.singular'] = 'Must not contain more than {0} characters.\nReduce the size of the input by one character.';
+    JS_RESOURCES['validation.multiSelect.maxItems'] = 'Multiselect box should not contain more than {0} number of items.';
+    JS_RESOURCES['validation.number'] = 'A valid numeric value must be entered: {0}.';
+    JS_RESOURCES['portalmodule.section.remove'] = 'Delete: {0}?';
+    JS_RESOURCES['show.helptext'] = 'Show Help Text';
+    JS_RESOURCES['validation.date.required'] = 'A complete date value must be provided: {0}.';
+    JS_RESOURCES['validation.password'] = 'Password cannot be empty or contain only spaces.';
+    JS_RESOURCES['validation.mismatch'] = 'The values entered do not match: {0}.\nConfirm: {0}.';
+    JS_RESOURCES['validation.percent'] = 'A valid percent value between 0 and 100 must be entered.';
+    JS_RESOURCES['validation.maximum_length.no_name.plural'] = 'Must not contain more than {0} characters.\nReduce the size of the input by {1} characters.';
+    JS_RESOURCES['field_name.substitute'] = '\'\'{0}\'\' input field';
+    JS_RESOURCES['validation.invalid_value'] = 'Invalid numeric value provided: {0}.';
+    JS_RESOURCES['validation.required'] = 'A value must be provided: {0}.';
+    JS_RESOURCES['validate.alignment.missing.content'] = 'You selected alignments but did not select any alignable content to copy.';
+    JS_RESOURCES['active.filter.free.form.text.blank'] = 'Specify a value for the search text field';
+    JS_RESOURCES['validation.system_role.reserve'] = '"bb" is not permitted at the beginning of a role ID.';
+    JS_RESOURCES['validation.date_past'] = 'The end date cannot be earlier than the start date.';
+    JS_RESOURCES['confirm.delete_item_value'] = 'This item {0} will be deleted. Continue?';
+    JS_RESOURCES['validation.invalid_chars'] = 'Contains illegal characters: {0}.\nDelete these characters: {1}';
+    JS_RESOURCES['hide.helptext'] = 'Hide Help Text';
+    JS_RESOURCES['validate.range.lessthen.str'] = 'Less Than {0}';
+    JS_RESOURCES['validate.login.invalid.username.or.pass'] = 'Enter a username and password.';
+    JS_RESOURCES['validation.date_past.confirm'] = 'The time is in the past.\nContinue with this time?';
+    JS_RESOURCES['validation.negative'] = 'A valid non-negative value must be entered: {0}.';
+    JS_RESOURCES['validation.url'] = 'A valid URL (for example, http://www.myschool.edu) must be entered.';
+    JS_RESOURCES['validate.range.overlap'] = 'criteria ({0}) overlaps criteria ({1}).';
+    JS_RESOURCES['validate.range.between.str'] = 'Between {0} and {1}';
+    JS_RESOURCES['validation.portal.tool.items.remove'] = 'Delete: {0}?';
+    JS_RESOURCES['validation.association.refresh.confirm'] = 'The associated items information might have been updated.\nClick \'OK\' to refresh the list or click \'Cancel\' to keep the current page.';
+    JS_RESOURCES['validate.enrolloptions.error.codeconflict'] = 'The Access Code Enrollment option conflicts with the selection of {instructor} Led enrollment.';
+    JS_RESOURCES['list.checkToSelectAllItems'] = 'Check to select all items';
+    JS_RESOURCES['validation.option.required'] = 'At least one option must be selected from the list.';
+    JS_RESOURCES['active.filter.changed.alert'] = 'criteria now contains';
+    JS_RESOURCES['vtbe.artifact.footer.validate.nameIfSaveArtifact'] = 'Specify a Name in order to Save as a Reusable Object.';
+    JS_RESOURCES['validate.invalidate.number'] = 'Please input valid number instead of {0}.';
+    JS_RESOURCES['validation.valid_course_id'] = 'Course id contains illegal characters or multibyte characters.';
+    JS_RESOURCES['assessment.incomplete.confirm'] = 'The following questions may be incomplete:\n {0}\nClick cancel to return to the test. Click Ok to submit assessment.';
+    JS_RESOURCES['validate.enrolloptions.error.nooption'] = 'Warning: Choose either the {instructor} Led or the Self-Enrollment option.';
+    JS_RESOURCES['validation.date_equal'] = 'The start date cannot be equal to the end date.';
+    JS_RESOURCES['validation.cmp_field.rejected'] = 'The {0} cannot be used without a corresponding {1} value.';
+    JS_RESOURCES['validation.time.required'] = 'A complete time value must be provided: {0}.';
+    JS_RESOURCES['validation.integer_number'] = 'A valid integer numeric value must be entered: {0}.';
+    JS_RESOURCES['validation.maximum_length'] = 'Must not contain more than 255 characters';
+    JS_RESOURCES['validate.enrolloptions.error.emailrequestconflict'] = 'The selected email enrollment option conflicts with the self-enrollment selection.';
+    JS_RESOURCES['validate.range.morethen.str'] = 'More Than {0}';
+    JS_RESOURCES['invalid_char.space'] = 'space';
+    JS_RESOURCES['notification.submit'] = 'Action already submitted.\nWait until the action is complete.';
+    JS_RESOURCES['validation.plain_text.confirm'] = 'To display equations correctly in this document, Smart Text or HTML format must be selected.\nClick \'OK\' to save in selected Plain Text format or click \'Cancel\' to select a new format.';
+    JS_RESOURCES['validation.allow_negtive.percent'] = 'A valid percent value between -100 and 100 must be entered.';
+    JS_RESOURCES['invalid_char.comma'] = 'comma';
+    JS_RESOURCES['confirm.remove_item'] = 'This action is final and cannot be undone. Continue?';
+    JS_RESOURCES['list.uncheckToDeselectAllItems'] = 'Uncheck to deselect all items';
+    JS_RESOURCES['validation.maximum_length.singular'] = 'Must not contain more than {1} characters: {0}.\nReduce the size of the input by one character.';
+    JS_RESOURCES['vtbe.artifact.footer.validate.saveLocationIfSaveArtifact'] = 'Specify a location for the Reusable Object.';
+    JS_RESOURCES['validation.minimum_length'] = 'A minimum of {0} characters must be entered: {1}.';
+    JS_RESOURCES['assessment.incomplete.confirm.survey'] = 'The following questions may be incomplete:\n {0}\nClick cancel to return to the survey. Click Ok to submit assessment.';
+    JS_RESOURCES['validation.image_type'] = 'Unknown image type: {0}. Image may not display correctly.';
+    JS_RESOURCES['validate.invalidate.number.space'] = 'Space';
+
+    JS_RESOURCES.getString = i18n_get_string;
+    JS_RESOURCES.getFormattedString = i18n_get_formatted_string;
+
+}
+
+_init_bundle_JS_RESOURCES();
+
+</script>
+<script language="javascript" type="text/javascript">
+
+var LOCALE_SETTINGS = new Object();
+
+function _init_bundle_LOCALE_SETTINGS() {
+
+    LOCALE_SETTINGS['LOCALE_SETTINGS.ADDRESS_FIELD_ORDER'] = 'STREET_1 STREET_2 CITY STATE ZIP_CODE COUNTRY';
+    LOCALE_SETTINGS['number_format.exponent'] = 'eE';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.YEAR_CHARACTER.03255'] = '';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.NAME.COLUMN.2'] = '{1}';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.CALENDAR_COLUMN_FORMAT_MONTH.03255'] = 'ddd';
+    LOCALE_SETTINGS['BBI18N.SOLARIS_CHARSET'] = 'ISO8859-1';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.NAME.COLUMN.1'] = '{0}';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.internal_date_format'] = 'MM/dd/yy';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.CALENDAR_TITLE_FORMAT_MONTH.03259'] = 'MMMM yyyy';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.TIME_ORDER.00519'] = 'HMP';
+    LOCALE_SETTINGS['float.format'] = '^(([0-9]{1,3}(\\,[0-9]{3})*)|[0-9]*)(\\.[0-9]+)?$';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.NAME.SORT_COLUMN'] = 'familyName';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.SHORT'] = '{1} {3}';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.DAY_SHORT.02097'] = 'SUN MON TUE WED THU FRI SAT';
+    LOCALE_SETTINGS['float.allow.negative.format'] = '^((([-]?[0-9]{1,3}(\\,[0-9]{3})*)|[-]?[0-9]*)(\\.[0-9]+)?|\\.[0-9]+)?$';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.CALENDAR_TYPE'] = 'GREGORIAN';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.GIVEN_INITIAL_FAMILY_NAME'] = '{4} {3}';
+    LOCALE_SETTINGS['efloat.format'] = '^[+-]?[0-9]*(\\.[0-9]+)?([eE][+-]?[0-9]+)?$';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.CALENDAR_TITLE_FORMAT_WEEK.03260'] = 'MMM d[ yyyy]{ \'&#8212;\'[ MMM] d yyyy}';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.MONTH_FULL.02100'] = 'January February March April May June July August September October November December';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.NUMBERS_HIJRI_LOCALIZED.00521'] = 'NO';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.LONG'] = '{0} {1} {2} {3}';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.MONTH_FULL_HIJRI.02100'] = 'Muḥarram,Ṣafar,Rabīʿ\'al-Awwal,Rabīʿ\'ath-Thānī,Jumādā\'al-Ūlā,Jumādā\'ath-Thāniya,Rajab,Shaʿbān,Ramaḍān,Shawwāl,Dhū\'al-Qaʿda,Dhū\'al-Ḥijja';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.REPORT_FONT_NAME.03169'] = 'ARIAL.TTF';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.WORK_FIELD_ORDER'] = 'JOB_TITLE DEPARTMENT COMPANY B_PHONE_1 B_PHONE_2 B_FAX';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.GREETING'] = 'Welcome, {1}';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.MONTH_SHORT.00520'] = 'Jan Feb  Mar Apr  May Jun Jul Aug Sep Oct Nov Dec';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.REPORT_FONT_SIZE.03168'] = '8';
+    LOCALE_SETTINGS['number_format.thousands_sep'] = ',';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.CALENDAR_COLUMN_FORMAT_WEEK.03256'] = 'ddd M/d';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.SHORT_SURNAME'] = '{3}, {1}';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.AM_PM.00522'] = 'AM PM';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.DATE_ORDER.00519'] = 'MDY';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.PHONE_FIELD_ORDER'] = 'H_PHONE_1 H_PHONE_2 H_FAX M_PHONE';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.DAY_MIN.02099'] = 'Su Mo Tu We Th Fr Sa';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.24HR_SUPPORT.03208'] = '0';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.REPORT_FONT_PATH.03170'] = 'C:/WINNT/Fonts';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.FIRST_DAY_OF_WEEK.03207'] = '0';
+    LOCALE_SETTINGS['BBI18N.WINDOWS_CHARSET'] = 'ISO-8859-1';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.MONTH_SHORT_HIJRI.00520'] = 'Muḥarram,Ṣafar,Rabīʿ\'I,Rabīʿ\'II,Jumādā\'I,Jumādā\'II,Rajab,Shaʿbān,Ramaḍān,Shawwāl,Dhū\'al-Qaʿda,Dhū\'al-Ḥijja';
+    LOCALE_SETTINGS['BBI18N.LINUX_CHARSET'] = 'iso88591';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.DAY_CHARACTER.03253'] = '';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.MONTH_CHARACTER.03254'] = '';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.NAME.COLUMN_ORDER'] = 'title,givenName,middleName,familyName,suffix,otherName';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.CALENDAR_TITLE_FORMAT_DAY.03258'] = 'dddd, MMM d, yyyy';
+    LOCALE_SETTINGS['number_format.decimal_point'] = '.';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.DAYS.00521'] = '01 02 03 04 05 06 07 08 09 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.DAY_FULL.02098'] = 'Sunday Monday Tuesday Wednesday Thursday Friday Saturday';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.date_display_pattern'] = 'MM/DD/YY';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.EXTENDED_SURNAME'] = '{3}';
+    LOCALE_SETTINGS['thousand.sep.format'] = ',';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.NUMBERS_HIJRI.00521'] = '0 1 2 3 4 5 6 7 8 9';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.ADDRESS_ORDER.07832'] = 'street,city,region,postal_code,country';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.CALENDAR_COLUMN_FORMAT_DAY.03257'] = 'dddd M/d';
+
+    LOCALE_SETTINGS.getString = i18n_get_string;
+    LOCALE_SETTINGS.getFormattedString = i18n_get_formatted_string;
+
+}
+
+_init_bundle_LOCALE_SETTINGS();
+
+</script>
+
+      <script language="javascript" type="text/javascript">
+
+var LOCALE_SETTINGS = new Object();
+
+function _init_bundle_LOCALE_SETTINGS() {
+
+    LOCALE_SETTINGS['LOCALE_SETTINGS.ADDRESS_FIELD_ORDER'] = 'STREET_1 STREET_2 CITY STATE ZIP_CODE COUNTRY';
+    LOCALE_SETTINGS['number_format.exponent'] = 'eE';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.YEAR_CHARACTER.03255'] = '';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.NAME.COLUMN.2'] = '{1}';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.CALENDAR_COLUMN_FORMAT_MONTH.03255'] = 'ddd';
+    LOCALE_SETTINGS['BBI18N.SOLARIS_CHARSET'] = 'ISO8859-1';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.NAME.COLUMN.1'] = '{0}';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.internal_date_format'] = 'MM/dd/yy';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.CALENDAR_TITLE_FORMAT_MONTH.03259'] = 'MMMM yyyy';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.TIME_ORDER.00519'] = 'HMP';
+    LOCALE_SETTINGS['float.format'] = '^(([0-9]{1,3}(\\,[0-9]{3})*)|[0-9]*)(\\.[0-9]+)?$';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.NAME.SORT_COLUMN'] = 'familyName';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.SHORT'] = '{1} {3}';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.DAY_SHORT.02097'] = 'SUN MON TUE WED THU FRI SAT';
+    LOCALE_SETTINGS['float.allow.negative.format'] = '^((([-]?[0-9]{1,3}(\\,[0-9]{3})*)|[-]?[0-9]*)(\\.[0-9]+)?|\\.[0-9]+)?$';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.CALENDAR_TYPE'] = 'GREGORIAN';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.GIVEN_INITIAL_FAMILY_NAME'] = '{4} {3}';
+    LOCALE_SETTINGS['efloat.format'] = '^[+-]?[0-9]*(\\.[0-9]+)?([eE][+-]?[0-9]+)?$';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.CALENDAR_TITLE_FORMAT_WEEK.03260'] = 'MMM d[ yyyy]{ \'&#8212;\'[ MMM] d yyyy}';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.MONTH_FULL.02100'] = 'January February March April May June July August September October November December';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.NUMBERS_HIJRI_LOCALIZED.00521'] = 'NO';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.LONG'] = '{0} {1} {2} {3}';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.MONTH_FULL_HIJRI.02100'] = 'Muḥarram,Ṣafar,Rabīʿ\'al-Awwal,Rabīʿ\'ath-Thānī,Jumādā\'al-Ūlā,Jumādā\'ath-Thāniya,Rajab,Shaʿbān,Ramaḍān,Shawwāl,Dhū\'al-Qaʿda,Dhū\'al-Ḥijja';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.REPORT_FONT_NAME.03169'] = 'ARIAL.TTF';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.WORK_FIELD_ORDER'] = 'JOB_TITLE DEPARTMENT COMPANY B_PHONE_1 B_PHONE_2 B_FAX';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.GREETING'] = 'Welcome, {1}';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.MONTH_SHORT.00520'] = 'Jan Feb  Mar Apr  May Jun Jul Aug Sep Oct Nov Dec';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.REPORT_FONT_SIZE.03168'] = '8';
+    LOCALE_SETTINGS['number_format.thousands_sep'] = ',';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.CALENDAR_COLUMN_FORMAT_WEEK.03256'] = 'ddd M/d';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.SHORT_SURNAME'] = '{3}, {1}';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.AM_PM.00522'] = 'AM PM';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.DATE_ORDER.00519'] = 'MDY';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.PHONE_FIELD_ORDER'] = 'H_PHONE_1 H_PHONE_2 H_FAX M_PHONE';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.DAY_MIN.02099'] = 'Su Mo Tu We Th Fr Sa';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.24HR_SUPPORT.03208'] = '0';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.REPORT_FONT_PATH.03170'] = 'C:/WINNT/Fonts';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.FIRST_DAY_OF_WEEK.03207'] = '0';
+    LOCALE_SETTINGS['BBI18N.WINDOWS_CHARSET'] = 'ISO-8859-1';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.MONTH_SHORT_HIJRI.00520'] = 'Muḥarram,Ṣafar,Rabīʿ\'I,Rabīʿ\'II,Jumādā\'I,Jumādā\'II,Rajab,Shaʿbān,Ramaḍān,Shawwāl,Dhū\'al-Qaʿda,Dhū\'al-Ḥijja';
+    LOCALE_SETTINGS['BBI18N.LINUX_CHARSET'] = 'iso88591';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.DAY_CHARACTER.03253'] = '';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.MONTH_CHARACTER.03254'] = '';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.NAME.COLUMN_ORDER'] = 'title,givenName,middleName,familyName,suffix,otherName';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.CALENDAR_TITLE_FORMAT_DAY.03258'] = 'dddd, MMM d, yyyy';
+    LOCALE_SETTINGS['number_format.decimal_point'] = '.';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.DAYS.00521'] = '01 02 03 04 05 06 07 08 09 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.DAY_FULL.02098'] = 'Sunday Monday Tuesday Wednesday Thursday Friday Saturday';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.date_display_pattern'] = 'MM/DD/YY';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.EXTENDED_SURNAME'] = '{3}';
+    LOCALE_SETTINGS['thousand.sep.format'] = ',';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.NUMBERS_HIJRI.00521'] = '0 1 2 3 4 5 6 7 8 9';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.ADDRESS_ORDER.07832'] = 'street,city,region,postal_code,country';
+    LOCALE_SETTINGS['LOCALE_SETTINGS.CALENDAR_COLUMN_FORMAT_DAY.03257'] = 'dddd M/d';
+
+    LOCALE_SETTINGS.getString = i18n_get_string;
+    LOCALE_SETTINGS.getFormattedString = i18n_get_formatted_string;
+
+}
+
+_init_bundle_LOCALE_SETTINGS();
+
+</script>
+
+ 
+        
+    
+    <link rel="stylesheet" href="https://wustl.blackboard.com/webapps/vtbe-tinymce/tiny_mce/themes/advanced/skins/default/ui.css?v=3300.2.0-rel.25+dcb5a17_3300.2.0-rel.25+dcb5a17"></head>
+  <body id="testid">
+  
+<h1 class="hideoff hideFromQuickLinks">Open Quick Links</h1><div id="quick_links_wrap" style="top: 97px;"><a id="quick_links_lightbox_link" href="#" onclick="quickLinks.lightboxHelper.toggleLightbox(); return false;" role="button" aria-haspopup="true" tabindex="1" title="Open Quick Links">Quick Links</a></div><div id="quickLinksLightboxDiv" class="hideoff" aria-hidden="true" style="display:none"><div class="ax-content"><div class="content-lite"><div id="quick_links_landmarks_section"><h2 class="hideFromQuickLinks">Page Landmarks</h2><ul class="shortcut-list" id="quick_links_landmark_list"></ul></div><div id="quick_links_headings_section"><h2 class="hideFromQuickLinks">Content Outline</h2><ul class="shortcut-list" id="quick_links_heading_list"></ul></div></div><div id="quick_links_hotkeys_section" class="legend"><h2 class="hideFromQuickLinks">Keyboard Shortcuts</h2><ul class="keycombos" id="quick_links_hotkey_list"></ul></div></div></div><h1 class="hideoff hideFromQuickLinks"></h1><div class="global-nav-bar-wrap"><div class="global-nav-bar-wrap-mobile-nav"><button class="hamburger hamburger--squeeze" type="button"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button></div><div class="global-nav-bar logout"><a id="topframe.logout.label" href="/webapps/login/?action=logout" target="_top" class="nav-link logout-link" title="Logout"> Logout</a></div><div id="global-nav" class="global-nav-bar" role="navigation" data-preview="false"><div class="hideoff">Global Menu</div><a id="global-nav-link" class="nav-link u_floatThis-right" href="#global-nav-flyout" aria-haspopup="true" tabindex="1" accesskey="m" role="navigation" title="Open Global Navigation Menu"><img src="https://d1e7kr0efngifs.cloudfront.net/3300.2.0-rel.25+dcb5a17/images/ci/ng/avatar_150.gif" alt="" id="global-avatar" datatooltitle="User Avatar Image" class="global-top-avatar"> Student McStudentFace<span id="badgeTotal" style="visibility: visible;" title=""><span class="hideoff" id="badgeAXLabel">Activity Updates</span><span class="badge" id="badgeTotalCount" title="">9</span></span><img src="https://d1e7kr0efngifs.cloudfront.net/3300.2.0-rel.25+dcb5a17/images/ci/mybb/arrowDown-topnav.png" alt="Expand Global Nav" id="global-toggle-img" class="global-toggle"></a><div id="global-nav-flyout" class="flyout-menu" style="height: 600px; display: none;" role="application" aria-expanded="false">
+<div id="flyoutMenuContent">
+      	<div class="hideoff" role="menubar" aria-expanded="false">Flyout Menu</div>
+        
+        <div id="global-nav-tools" class="mybb-tools">
+            <ul id="global-list-tools" role="menu">
+            
+              <li class="profile">
+                <a id="profileLink" title="Edit My Blackboard Profile" href="#" onclick="globalNavMenu.toggleMenu(false);" role="menuitem" data-profile-link-location="globalNav" data-profile-accessor="true" data-profile-id="">
+                   <img src="https://d1e7kr0efngifs.cloudfront.net/3300.2.0-rel.25+dcb5a17/images/ci/ng/avatar_150.gif" alt="Profile Image">
+</a>
+              </li>              
+              <li class="overview">
+                  <a id="BB-CORE_____overview-tool" href="/webapps/bb-social-learning-BB5842481bae004/execute/mybb?cmd=display&amp;toolId=BB-CORE_____overview-tool" title="Bb Home" role="menuitem">
+                  
+                    <!-- Use hidden text so screenreaders will announce label for badge - tool activity update. -->
+                      <span class="hideoff" data-tool-title="Bb Home" id="BB-CORE_____overview-tool_AXLabel"></span>
+                    
+                      <span class="badge" id="BB-CORE_____overview-tool::badge" aria-labelledby="BB-CORE_____overview-tool_AXLabel" style="display:none"></span>
+                      
+                    </a>
+                </li>
+                
+              <li class="stream">
+                  <a id="StreamsOnMyBb_____MyStreamTool" href="/webapps/bb-social-learning-BB5842481bae004/execute/mybb?cmd=display&amp;toolId=StreamsOnMyBb_____MyStreamTool" title="Posts" role="menuitem">
+                  
+                    <!-- Use hidden text so screenreaders will announce label for badge - tool activity update. -->
+                      <span class="hideoff" data-tool-title="Posts" id="StreamsOnMyBb_____MyStreamTool_AXLabel"></span>
+                    
+                      <span class="badge" id="StreamsOnMyBb_____MyStreamTool::badge" aria-labelledby="StreamsOnMyBb_____MyStreamTool_AXLabel" style="display:none"></span>
+                      
+                    </a>
+                </li>
+                
+              <li class="alerts">
+                  <a id="AlertsOnMyBb_____AlertsTool" href="/webapps/bb-social-learning-BB5842481bae004/execute/mybb?cmd=display&amp;toolId=AlertsOnMyBb_____AlertsTool" title="Updates" role="menuitem">
+                  
+                    <!-- Use hidden text so screenreaders will announce label for badge - tool activity update. -->
+                      <span class="hideoff" data-tool-title="Updates" id="AlertsOnMyBb_____AlertsTool_AXLabel">Updates - activity updates</span>
+                    
+                      <span class="badge" id="AlertsOnMyBb_____AlertsTool::badge" aria-labelledby="AlertsOnMyBb_____AlertsTool_AXLabel" style="">9</span>
+                      
+                    </a>
+                </li>
+                
+              <li class="risktracker">
+                  <a id="RETENTION_PLUGIN_____RetentionCenterTool" href="/webapps/bb-social-learning-BB5842481bae004/execute/mybb?cmd=display&amp;toolId=RETENTION_PLUGIN_____RetentionCenterTool" title="Retention Center" role="menuitem">
+                  
+                    <!-- Use hidden text so screenreaders will announce label for badge - tool activity update. -->
+                      <span class="hideoff" data-tool-title="Retention Center" id="RETENTION_PLUGIN_____RetentionCenterTool_AXLabel"></span>
+                    
+                      <span class="badge" id="RETENTION_PLUGIN_____RetentionCenterTool::badge" aria-labelledby="RETENTION_PLUGIN_____RetentionCenterTool_AXLabel" style="display:none"></span>
+                      
+                    </a>
+                </li>
+                
+              <li class="grades">
+                  <a id="MyGradesOnMyBb_____MyGradesTool" href="/webapps/bb-social-learning-BB5842481bae004/execute/mybb?cmd=display&amp;toolId=MyGradesOnMyBb_____MyGradesTool" title="My Grades" role="menuitem">
+                  
+                    <!-- Use hidden text so screenreaders will announce label for badge - tool activity update. -->
+                      <span class="hideoff" data-tool-title="My Grades" id="MyGradesOnMyBb_____MyGradesTool_AXLabel"></span>
+                    
+                      <span class="badge" id="MyGradesOnMyBb_____MyGradesTool::badge" aria-labelledby="MyGradesOnMyBb_____MyGradesTool_AXLabel" style="display:none"></span>
+                      
+                    </a>
+                </li>
+                
+              <li class="calendar">
+                  <a id="calendar-mybb_____calendar-tool" href="/webapps/bb-social-learning-BB5842481bae004/execute/mybb?cmd=display&amp;toolId=calendar-mybb_____calendar-tool" title="Calendar" role="menuitem">
+                  
+                    <!-- Use hidden text so screenreaders will announce label for badge - tool activity update. -->
+                      <span class="hideoff" data-tool-title="Calendar" id="calendar-mybb_____calendar-tool_AXLabel"></span>
+                    
+                      <span class="badge" id="calendar-mybb_____calendar-tool::badge" aria-labelledby="calendar-mybb_____calendar-tool_AXLabel" style="display:none"></span>
+                      
+                    </a>
+                </li>
+                
+              <li class="people">
+                  <a id="CloudCoreGateOnMyBb_____CloudPeopleTool" href="/webapps/bb-social-learning-BB5842481bae004/execute/mybb?cmd=display&amp;toolId=CloudCoreGateOnMyBb_____CloudPeopleTool" title="People" role="menuitem">
+                  
+                    <!-- Use hidden text so screenreaders will announce label for badge - tool activity update. -->
+                      <span class="hideoff" data-tool-title="People" id="CloudCoreGateOnMyBb_____CloudPeopleTool_AXLabel"></span>
+                    
+                      <span class="badge" id="CloudCoreGateOnMyBb_____CloudPeopleTool::badge" aria-labelledby="CloudCoreGateOnMyBb_____CloudPeopleTool_AXLabel" style="display:none"></span>
+                      
+                    </a>
+                </li>
+                
+              <li id="global-more-link" class="more-link" style="display: none;">
+                <a href="#global-more-tools" onclick="globalNavMenu.onMoreClick(event)" title="Access More Tools">
+                	<img src="https://d1e7kr0efngifs.cloudfront.net/3300.2.0-rel.25+dcb5a17/images/spacer.gif" alt="null">
+</a>
+              </li>
+            </ul>
+            <ul id="global-more-tools" class="more-tools clearfix" style="display: none;"> 
+            </ul>
+    
+          </div>
+        <div id="vertical_container" class="accordion-wrapper" role="menu">
+        
+          <div class="accordion_toggle clearfix" id="CourseNavMenuSection.Course-title" tabindex="0" aria-haspopup="true" role="menuitem">
+              <span data-section-id="CourseNavMenuSection.Course" data-section-uri="/webapps/blackboard/execute/globalCourseNavMenuSection?cmd=view&amp;serviceLevel=blackboard.data.course.Course$ServiceLevel:FULL" style="color: #555;">
+                Courses</span>
+            </div>
+              
+            <div class="accordion_content" id="CourseNavMenuSection.Course-content" style="height: 471px;" data-section-uri="/webapps/blackboard/execute/globalCourseNavMenuSection?cmd=view&amp;serviceLevel=blackboard.data.course.Course$ServiceLevel:FULL" data-section-id="CourseNavMenuSection.Course" data-allow-caching="true" role="menu" aria-expanded="true" aria-hidden="false">
+<span class="labelMenuItem">Recently Visited</span>
+        <ul class="course-list accordion-list courses">
+          <li>           
+              <a href="#" onclick="javascript:globalNavMenu.goToUrl('/webapps/blackboard/execute/launcher?type=Course&amp;id=_173884_1&amp;url='); return false;" role="menuitem">FL2017.E81.CSE.556A.01 - Human-Computer Interaction Methods</a> </li> 
+          <li>           
+              <a href="#" onclick="javascript:globalNavMenu.goToUrl('/webapps/blackboard/execute/launcher?type=Course&amp;id=_180848_1&amp;url='); return false;" role="menuitem">FL2017.B58.OSCM.356.Merge - OPERATIONS MANAGEMENT</a> </li> 
+          <li>           
+              <a href="#" onclick="javascript:globalNavMenu.goToUrl('/webapps/blackboard/execute/launcher?type=Course&amp;id=_178321_1&amp;url='); return false;" role="menuitem">FL2017.L97.IAS.376.01 - International Economics</a> </li> 
+          <li>           
+              <a href="#" onclick="javascript:globalNavMenu.goToUrl('/webapps/blackboard/execute/launcher?type=Course&amp;id=_181436_1&amp;url='); return false;" role="menuitem">FL2017.B52.FIN.470A.560A.Merge - Research Methods in Finance</a> </li> 
+          </ul>
+      <span class="labelMenuItem">My Other Courses</span>
+        <ul class="course-list accordion-list courses">
+          <li>           
+              <a href="#" onclick="javascript:globalNavMenu.goToUrl('/webapps/blackboard/execute/launcher?type=Course&amp;id=_105919_1&amp;url='); return false;" role="menuitem">FL2014.L24.Math.233.02 - Calculus III</a> </li> 
+          <li>           
+              <a href="#" onclick="javascript:globalNavMenu.goToUrl('/webapps/blackboard/execute/launcher?type=Course&amp;id=_151460_1&amp;url='); return false;" role="menuitem">FL2016.E81.CSE.132.01 - Computer Science II</a> </li> 
+          <li>           
+              <a href="#" onclick="javascript:globalNavMenu.goToUrl('/webapps/blackboard/execute/launcher?type=Course&amp;id=_145741_1&amp;url='); return false;" role="menuitem">FL2016.E81.CSE.247.01 - Data Structures and Algorithms</a> </li> 
+          <li>           
+              <a href="#" onclick="javascript:globalNavMenu.goToUrl('/webapps/blackboard/execute/launcher?type=Course&amp;id=_149251_1&amp;url='); return false;" role="menuitem">FL2016.E81.CSE.427S.01 - Cloud Computing with Big Data Applications</a> </li> 
+          <li>           
+              <a href="#" onclick="javascript:globalNavMenu.goToUrl('/webapps/blackboard/execute/launcher?type=Course&amp;id=_181229_1&amp;url='); return false;" role="menuitem">FL2017.B52.FIN.448.Merge - Advanced Financial Management</a> </li> 
+          <li>           
+              <a href="#" onclick="javascript:globalNavMenu.goToUrl('/webapps/blackboard/execute/launcher?type=Course&amp;id=_173735_1&amp;url='); return false;" role="menuitem">FL2017.E81.CSE.530S.01 - Database Management Systems</a> </li> 
+          <li>           
+              <a href="#" onclick="javascript:globalNavMenu.goToUrl('/webapps/blackboard/execute/launcher?type=Course&amp;id=_179170_1&amp;url='); return false;" role="menuitem">FL2017.E81.CSE.556A.01 - Human-Computer Interaction Methods</a> </li> 
+          <li>           
+              <a href="#" onclick="javascript:globalNavMenu.goToUrl('/webapps/blackboard/execute/launcher?type=Course&amp;id=_169508_1&amp;url='); return false;" role="menuitem">SP2017.B50.ACCT.2620.04 - Principles of Managerial Accounting</a> </li> 
+          <li>           
+              <a href="#" onclick="javascript:globalNavMenu.goToUrl('/webapps/blackboard/execute/launcher?type=Course&amp;id=_169676_1&amp;url='); return false;" role="menuitem">SP2017.B52.FIN.400I.01 - Mergers &amp; Acquisitions</a> </li> 
+          <li>           
+              <a href="#" onclick="javascript:globalNavMenu.goToUrl('/webapps/blackboard/execute/launcher?type=Course&amp;id=_169614_1&amp;url='); return false;" role="menuitem">SP2017.B52.FIN.451.01 - Options, Futures and Derivative Securities</a> </li> 
+          <li>           
+              <a href="#" onclick="javascript:globalNavMenu.goToUrl('/webapps/blackboard/execute/launcher?type=Course&amp;id=_161354_1&amp;url='); return false;" role="menuitem">SP2017.E81.CSE.431S.01 - Translation of Computer Languages</a> </li> 
+          <li>           
+              <a href="#" onclick="javascript:globalNavMenu.goToUrl('/webapps/blackboard/execute/launcher?type=Course&amp;id=_161355_1&amp;url='); return false;" role="menuitem">SP2017.E81.CSE.437S.01 - Software Engineering Workshop</a> </li> 
+          </ul>
+      
+                 
+                     
+            </div>
+            
+          <div class="accordion_toggle clearfix" id="CourseNavMenuSection.Org-title" tabindex="0" aria-haspopup="true" role="menuitem">
+              <span data-section-id="CourseNavMenuSection.Org" data-section-uri="/webapps/blackboard/execute/globalCourseNavMenuSection?cmd=view&amp;serviceLevel=blackboard.data.course.Course$ServiceLevel:COMMUNITY" style="color: #555;">
+                Organizations</span>
+            </div>
+              
+            <div class="accordion_content" id="CourseNavMenuSection.Org-content" style="display: none; height: 471px;" data-section-uri="/webapps/blackboard/execute/globalCourseNavMenuSection?cmd=view&amp;serviceLevel=blackboard.data.course.Course$ServiceLevel:COMMUNITY" data-section-id="CourseNavMenuSection.Org" data-allow-caching="true" role="menu">          
+            </div>
+            
+          <div class="accordion_toggle clearfix" id="global_nav_tools_section-title" tabindex="0" aria-haspopup="true" role="menuitem">
+              <span data-section-id="global_nav_tools_section" data-section-uri="/webapps/portal/execute/toolsGlobalNavMenuSection?cmd=view" style="color: #555;">
+                Tools</span>
+            </div>
+              
+            <div class="accordion_content" id="global_nav_tools_section-content" style="display: none; height: 471px;" data-section-uri="/webapps/portal/execute/toolsGlobalNavMenuSection?cmd=view" data-section-id="global_nav_tools_section" data-allow-caching="true" role="menu">          
+            </div>
+            
+          <div class="accordion_toggle clearfix" id="global_nav_settings_section-title" tabindex="0" aria-haspopup="true" role="menuitem">
+              <span data-section-id="global_nav_settings_section" data-section-uri="/webapps/portal/execute/settingsGlobalNavMenuSection?cmd=view" style="color: #555;">
+                Settings</span>
+            </div>
+              
+            <div class="accordion_content" id="global_nav_settings_section-content" style="display: none; height: 471px;" data-section-uri="/webapps/portal/execute/settingsGlobalNavMenuSection?cmd=view" data-section-id="global_nav_settings_section" data-allow-caching="true" role="menu">          
+            </div>
+            
+          </div>
+   </div>
+
+           <link rel="stylesheet" type="text/css" href="/webapps/retention/css/myblackboard_icon.css?v=3300.2.0-rel.25+dcb5a17" id="css_0">
+                  
+       
+       
+           <ul id="bottomButtons" class="bottom-buttons"><li class="bottom-buttons-home"><a id="topframe.home.label" href="https://blackboard.wustl.edu" target="_blank" class="home" title="Home" role="menuitem"> Home</a></li><li class="bottom-buttons-help"><a id="topframe.help.label" href="#" onclick="globalNavigation.openHelpWindow('https://bb.wustl.edu/webapps/portal/frameset.jsp?tab_tab_group_id=_12_1');" class="help" title="Help" role="menuitem"> Help</a></li></ul></div></div></div>
+<!-- global_nav.jsp -->
+
+<div id="globalNavPageNavArea">
+    <table class="bouncer" summary="Top frame table" role="presentation">
+      <tbody><tr>
+        <td>
+          <div class="topTabs bgBanner" id="topTabs">
+  
+            <div class="brandingImgWrap">
+              <a href="https://blackboard.wustl.edu" target="_blank" title="Washington University">
+                <img src="/branding/_1_1/wulogo-transparent.png" alt="Washington University" title="Washington University" class="bannerImage">
+</a>
+            </div>
+  
+            <div class="tabWrapper-right">
+              <h2 class="hideoff" id="anonymous_element_1">Top Frame Tabs</h2>
+              <table class="appTabs transparent" id="appTabList" summary="Tab List table" role="presentation">
+                <tbody><tr>
+                 <td id="My Blackboard">
+                      <a href="/webapps/portal/execute/tabs/tabAction?tab_tab_group_id=_1_1" target="_top"><span>My Blackboard</span>
+                        <span class="hideoff"> Tab 1 of 4</span>
+                      </a>
+                    </td>
+                  <td id="Courses.label" class="active">
+                      <a href="/webapps/portal/execute/tabs/tabAction?tab_tab_group_id=_2_1" target="_top"><span>Courses</span>
+                        <span class="hideoff"> Tab 2 of 4&nbsp;(active tab)</span>
+                      </a>
+                    </td>
+                  <td id="Organizations">
+                      <a href="/webapps/portal/execute/tabs/tabAction?tab_tab_group_id=_3_1" target="_top"><span>Organizations</span>
+                        <span class="hideoff"> Tab 3 of 4</span>
+                      </a>
+                    </td>
+                  <td id="bbcms.label">
+                      <a href="/webapps/portal/execute/tabs/tabAction?tab_tab_group_id=_11_1" target="_top"><span>Content Collection</span>
+                        <span class="hideoff"> Tab 4 of 4</span>
+                      </a>
+                    </td>
+                  </tr>
+              </tbody></table>
+              <div class="clearfloats"></div>
+            </div>
+            </div>
+        </td>
+      </tr>
+    </tbody></table>
+  </div>
+
+<div id="globalNavPageContentArea" style="height: 411px; overflow: visible;">
+
+<h2 class="hideoff" id="anonymous_element_2">
+ Current Location
+</h2>
+
+<div id="breadcrumbs" class="breadcrumbs clearfix ">
+ <div class="breadcrumb-controls clearfix" id="breadcrumb_controls_id">
+
+
+
+
+
+<div id="helpTextToggle" class="helpLink">
+  <a href="#" id="helpTextToggleLink" class="browseIcon" style="display: inline-block;" title="Help is On: Click to hide page help.">
+	<img id="helpTextToggleImg" src="https://d1e7kr0efngifs.cloudfront.net/3300.2.0-rel.25+dcb5a17/images-ltr/ci/ng/small_help_on2.gif" alt="Help is On: Click to hide page help."></a>
+</div>
+ <input name="showHelperSetting" id="showHelperSetting" value="true" type="hidden">
+ </div>
+
+ <div class="path  noToggle" role="navigation" id="anonymous_element_8">
+ <ol class="clearfix">
+    	<li class="root coursePath"> <a href="/webapps/blackboard/execute/courseMain?course_id=_179170_1" title="FL2017.E81.CSE.556A.01 - Human-Computer Interaction Methods">                  FL2017.E81.CSE.556A.01 - Human-Computer Interaction Methods
+              </a>      <div id="arrowContext_1" class="courseArrow" onclick="page.ContextMenu.changeArrowInBreadcrumb(1, event );">
+<span class="contextMenuContainer" style=" display: inline;" bb:menugeneratorurl="/webapps/blackboard/execute/getCrossCourseMenuHTML?course_id=_179170_1" bb:navitem="" bb:contextparameters="" bb:menuorder="" bb:overwritenavitems="" bb:beforeshowfunc="">
+   
+  <a id="cmlink_85629106d6ea42989e8c6e9a5ea07ba6" onfocus="page.ContextMenu.LI(event, 'cmdiv_85629106d6ea42989e8c6e9a5ea07ba6',false);" onmouseover="page.ContextMenu.LI(event, 'cmdiv_85629106d6ea42989e8c6e9a5ea07ba6',false);" class="cmimg editmode jsInit" href="#contextMenu" title="Course-to-Course Navigation"> <img src="https://d1e7kr0efngifs.cloudfront.net/3300.2.0-rel.25+dcb5a17/images/ci/icons/cmlink_generic.gif" alt="Course-to-Course Navigation" onload="page.ContextMenu.LI(event, 'cmdiv_85629106d6ea42989e8c6e9a5ea07ba6',false);"></a>
+  
+</span>
+</div>    </li>
+   	<li> <a href="/webapps/blackboard/content/listContent.jsp?course_id=_179170_1&amp;content_id=_2866948_1&amp;mode=reset" title="Assignments">                  Assignments
+              </a>          </li>
+   	<li class="placeholder">                   Upload Assignment: HCI
+                        </li>
+  </ol>
+ </div>
+
+</div>
+
+<div class="locationPane">
+ <nav role="navigation" aria-label="Course Menu" id="navigationPane" class="navigationPane " style="height: 1265px;">
+ 
+
+ <div id="menuWrap" class="menuWrap">
+  <div id="puller">
+  <a id="menuPuller" class="clickpuller" title="Hide Course Menu" href="#">
+   <img id="expander" alt="Hide Course Menu" src="https://d1e7kr0efngifs.cloudfront.net/3300.2.0-rel.25+dcb5a17/images/spacer.gif">
+  </a>
+ </div>
+<div class="menuWrap-inner">
+  <input name="blackboard.platform.security.NonceUtil.nonce" value="7283c9ee-e5cb-4002-b219-07ec267a9fae" type="hidden"><div id="courseMenuPalette" class="navPalette listCm navPaletteExpCol"><div class="actionBarMicro clearfix"><h2 class="hideoff" id="anonymous_element_3">Menu Management Options</h2><ul class="nav clearfix u_floatThis-right"><li id="refreshMenuLink" class="secondaryButton "><a href="#" title="Refresh"><span><img src="https://d1e7kr0efngifs.cloudfront.net/3300.2.0-rel.25+dcb5a17/images/ci/ng/small_refresh.gif" alt="Refresh"></span></a></li><li id="courseMapButton" class="secondaryButton "><a href="#" title="Display Course Menu in a Window"><span><img src="https://d1e7kr0efngifs.cloudfront.net/3300.2.0-rel.25+dcb5a17/images/ci/ng/small_new_window.gif" alt="Display Course Menu in a Window"></span></a></li></ul></div><div class="navPaletteContent"><h2 class="hideoff" tabindex="-1" id="anonymous_element_4">Course Menu:</h2><div id="courseMenuPalette_paletteTitleHeading"><div class="navPaletteTitle"><h3 aria-expanded="true" id="anonymous_element_5"><a href="#" class="comboLink" title="Collapse FL2017.E81.CSE.556A.01 - Human-Computer Interaction Methods" id="courseMenu_link">FL2017.E81.CSE.556A.01 - Human-Computer Interaction Methods</a></h3><h3 id="anonymous_element_6"><a href="/webapps/blackboard/execute/courseMain?course_id=_179170_1" target="" class="submenuLink" id="courseMenu_combo" title="Go to Course Entry Page"><img src="https://d1e7kr0efngifs.cloudfront.net/3300.2.0-rel.25+dcb5a17/images/ci/icons/generic_dbl_arrow_right.gif" alt="Course Entry Page"></a></h3></div></div><ul id="courseMenuPalette_contents" class="courseMenu"><li id="paletteItem:_3205700_1" class="clearfix "><a href="/webapps/blackboard/content/launchLink.jsp?course_id=_179170_1&amp;toc_id=_3205700_1&amp;mode=view&amp;mode=reset" target="_self"><span title="Home Page">Home Page</span></a></li><li id="paletteItem:_3205701_1" class="clearfix "><a href="/webapps/blackboard/content/launchLink.jsp?course_id=_179170_1&amp;tool_id=_117_1&amp;tool_type=TOOL&amp;mode=view&amp;mode=reset" target="_self"><span title="Announcements">Announcements</span></a></li><li id="paletteItem:_3205702_1" class="clearfix "><a href="/webapps/blackboard/content/launchLink.jsp?course_id=_179170_1&amp;tool_id=_1835_1&amp;tool_type=TOOL&amp;mode=view&amp;mode=reset" target="_self"><span title="Course Calendar">Course Calendar</span></a></li><li id="paletteItem:_3205703_1" class="clearfix divider"><hr></li><li id="paletteItem:_3205696_1" class="clearfix "><a href="/webapps/blackboard/content/listContent.jsp?course_id=_179170_1&amp;content_id=_2866949_1&amp;mode=reset" target="_self"><span title="Course Documents">Course Documents</span></a></li><li id="paletteItem:_3205697_1" class="clearfix "><a href="/webapps/blackboard/content/listContent.jsp?course_id=_179170_1&amp;content_id=_2866948_1&amp;mode=reset" target="_self"><span title="Assignments">Assignments</span></a></li><li id="paletteItem:_3205704_1" class="clearfix "><a href="/webapps/blackboard/content/launchLink.jsp?course_id=_179170_1&amp;tool_id=_125_1&amp;tool_type=TOOL&amp;mode=view&amp;mode=reset" target="_self"><span title="Discussions">Discussions</span></a></li><li id="paletteItem:_3205705_1" class="clearfix divider"><hr></li><li id="paletteItem:_3205706_1" class="clearfix "><a href="/webapps/blackboard/content/launchLink.jsp?course_id=_179170_1&amp;tool_id=_139_1&amp;tool_type=TOOL&amp;mode=view&amp;mode=reset" target="_self"><span title="My Grades">My Grades</span></a></li><li id="paletteItem:_3205698_1" class="clearfix "><a href="/webapps/blackboard/content/listContent.jsp?course_id=_179170_1&amp;content_id=_2866950_1&amp;mode=reset" target="_self"><span title="Student Bb Help">Student Bb Help</span></a></li><li id="paletteItem:_3205708_1" class="clearfix divider"><hr></li><li id="paletteItem:_3205712_1" class="clearfix divider"><hr></li><li id="paletteItem:_3255681_1" class="clearfix "><a href="/webapps/blackboard/content/listContent.jsp?course_id=_179170_1&amp;content_id=_2976644_1&amp;mode=reset" target="_self"><span title="Readings">Readings</span></a></li></ul></div></div>
+  </div>
+ </div>
+ </nav>
+ <div id="contentPanel" class="contentPane  " style="height: 1265px;">
+<div class="shadow">
+       <div id="editmodeWrapper"> 
+ 
+  <div id="content" class="contentBox ">
+   
+<div id="pageTitleDiv" class="pageTitle clearfix ">
+
+  
+<div id="pageTitleBar" class="pageTitleIcon" tabindex="0">
+  <img src="https://d1e7kr0efngifs.cloudfront.net/3300.2.0-rel.25+dcb5a17/images/ci/sets/set12/assignment_on.svg" alt="" id="titleicon"><h1 id="pageTitleHeader" tabindex="-1"><span id="pageTitleText">
+  Upload Assignment: HCI  </span></h1>
+        <span id="_titlebarExtraContent" class="titleButtons"></span>
+</div>
+
+
+
+</div>
+
+      <div class="container clearfix" id="containerdiv">
+    <h2 class="hideoff" id="anonymous_element_7">Content</h2>
+    <link rel="stylesheet" href="/webapps/achievements/css/achievements.css" type="text/css" media="screen"><form enctype="multipart/form-data" method="post" name="uploadAssignmentForm" action="/webapps/assignment/uploadAssignment?action=submit" id="uploadAssignmentFormId" onsubmit="return checkDupeFile('submit')">
+<input name="blackboard.platform.security.NonceUtil.nonce" value="de1d909c-aaa0-4edd-917d-b124bc117950" type="hidden">
+  <input name="blackboard.platform.security.NonceUtil.nonce.ajax" id="ajaxNonceId" value="9cf183c0-6892-47be-81d6-92f9d045f4e9" type="hidden">
+
+
+ 
+  <input name="isAjaxSubmit" id="isAjaxSubmit" value="true" type="hidden">
+
+
+ 
+  <input name="course_id" id="course_id" value="_179170_1" type="hidden">
+
+
+ 
+  <input name="content_id" id="content_id" value="_2976654_1" type="hidden">
+
+
+ 
+  <input name="attempt_id" id="attempt_id" value="" type="hidden">
+
+
+ 
+  <input name="mode" id="mode" value="view" type="hidden">
+
+
+ 
+  <input name="remove_file_id" id="remove_file_id" value="" type="hidden">
+
+
+ 
+  <input name="dispatch" id="dispatch" value="" type="hidden">
+
+
+ 
+  <input name="recallUrl" id="recallUrl" value="/webapps/blackboard/content/listContent.jsp?content_id=_2866948_1&amp;course_id=_179170_1" type="hidden">
+
+
+ 
+  <input name="lu_link_id" id="lu_link_id" value="" type="hidden">
+
+
+ 
+<div id="dataCollectionContainer">
+<div class="submitStepTop">
+</div>
+
+     <div id="step1" class=" ">
+       <h3 id="steptitle1" class="steptitle">
+               <span id="stepnumber1">1.</span> &nbsp;
+            Assignment Information
+      </h3>     <div id="stepcontent1" class="  stepcontent  ">
+   <ol role="presentation">
+     
+   
+     
+
+<li id="metadata">
+
+
+<div class="field">
+
+  <div class="metaWrapper clearfix">
+          <div class="metaSection">
+              <div class="metaLabel" id="assignMeta2">Due Date</div>
+              <div class="metaField" aria-describedby="assignMeta2">
+                Monday, December 11, 2017<span class="metaSubInfo">
+                  5:00 PM</span>
+              </div>
+            </div>
+          <div class="metaSection">
+            <div class="metaLabel" id="assignMeta3">Points Possible</div>
+            <div class="metaField" aria-describedby="assignMeta2">
+              50<span class="metaSubInfo">
+                </span>
+            </div>
+          </div>
+          </div>
+        
+    <span class="fieldErrorText"></span>
+  
+</div>
+</li> 
+
+<li id="instructions">
+
+
+<div class="field">
+
+  
+    <span class="fieldErrorText"></span>
+  
+</div>
+</li> 
+   </ol>
+  </div>
+  
+ </div><div id="step2" class=" ">
+       <h3 id="steptitle2" class="steptitle">
+               <span id="stepnumber2">2.</span> &nbsp;
+            Assignment Submission
+      </h3>     <div id="stepcontent2" class="  stepcontent  ">
+   <ol role="presentation">
+     
+   
+     
+
+<li>
+<div class="label">
+          Text Submission
+    </div>
+
+
+<div class="field">
+
+  <a id="submissionLink" class="genericButton contentEditorExpander" href="#" title="Click to show or hide textbox to write assignment submission." onclick="inlineGrading.gradingUtil.toggleOnEvent(event, $('textSubmissionContainer'), false, 'a');" aria-expanded="false">
+            Write Submission</a>
+        
+    <span class="fieldErrorText"></span>
+  
+</div>
+</li> 
+
+<li id="textSubmissionContainer" style="display: none;">
+
+
+<div class="field">
+
+  
+      <iframe id="vtbe_google_logout" name="vtbe_google_logout" style="width:100;height:250;border:2px solid #fff;  display:none;"></iframe>
+      <input name="studentSubmission.text_f" id="studentSubmission.text_f" value="" type="hidden">
+<input name="studentSubmission.text_w" id="studentSubmission.text_w" value="" type="hidden">
+<input name="studentSubmission.type" id="studentSubmission.type" value="H" type="hidden">
+<input name="textbox_prefix" id="textbox_prefix" value="studentSubmission.text" type="hidden">
+<div id="studentSubmission.text_csPermFileList" style="display: none;"></div>
+
+
+    <span class="fieldErrorText"></span>
+  
+</div>
+</li> <li id="bbFilePicker_dropzone_newFile" class="dropzone fade">
+ <div class="label">
+   <label for="newFile_localBrowse">Attach Files
+  </label>
+ </div>
+ <div class="field">
+      <div class="fileInputWrapper">
+   <input class="hiddenInput" tabindex="-1" multiple="" aria-hidden="true" id="newFile_chooseLocalFile" type="file">
+   <input class="browse visibleInput" id="newFile_localBrowse" value="Browse My Computer" title="Browse Local Files.  Opens the File Upload window to upload files from your computer." onclick="$('newFile_chooseLocalFile').click();" type="button">
+  </div>
+       <input class="browse" id="newFile_csBrowse" value="Browse Content Collection" title="Browse Content Collection" type="button">
+   <input id="newFile_selectedCSFile" value="" type="hidden">
+   <input id="newFile_selectedCSFileName" type="hidden">
+   <input id="newFile_selectedCSFilePath" value="" type="hidden">
+   <input id="newFile_selectedCSFileSize" type="hidden">
+   <input id="copyToPrivateDoc" value="false" type="hidden">
+              </div> 
+</li>
+  <li id="newFile_listHtmlDiv" style="display:none;">
+  <div class="label">
+   Attached files
+  </div>
+  <div class="noLabelField">
+   <table class="attachments" id="newFile_table" summary="This is a table showing the attributes of a collection of items.">
+ <thead>
+  
+                        
+    
+  <tr>
+     <th scope="col" class="" align="LEFT">File Name</th>
+   <th scope="col" class="" align="LEFT">Link Title</th>
+   <th scope="col" class="" align="LEFT"></th>
+   </tr>
+ </thead>
+ <tbody id="newFile_table_body"> 
+  </tbody>
+</table>
+
+   <div id="newFile_loading" style="text-align:center;display:none;">
+     <img src="https://d1e7kr0efngifs.cloudfront.net/3300.2.0-rel.25+dcb5a17/images/ci/misc/progress/progress_learningSystem.gif" alt="Loading...">
+   </div>
+     </div>
+ </li>
+ 
+   </ol>
+  </div>
+  
+ </div><div id="step3" class=" ">
+       <h3 id="steptitle3" class="steptitle">
+               <span id="stepnumber3">3.</span> &nbsp;
+            Add Comments
+      </h3>     <div id="stepcontent3" class="  stepcontent  ">
+   <ol role="presentation">
+     
+   
+     
+
+<li>
+<div class="label label-stack">
+        <label for="student_commentstext">
+      Comments
+    </label>
+    </div>
+
+
+<div class="field">
+
+  
+      <input name="student_commentstext_f" id="student_commentstext_f" value="" type="hidden">
+<input name="student_commentstext_w" id="student_commentstext_w" value="" type="hidden">
+<input name="student_commentstype" id="student_commentstype" value="H" type="hidden">
+<input name="textbox_prefix" id="textbox_prefix" value="student_commentstext" type="hidden">
+<div id="student_commentstext_csPermFileList" style="display: none;"></div>
+
+  
+    <span class="fieldErrorText"></span>
+  
+</div>
+</li> 
+   </ol>
+  </div>
+  
+ </div>
+ 
+ 		 <div id="bottomSubmitPlaceHolder" style="height: 140px;"></div><div class="submitStepBottom submitStepFixed" style="width: 988px;">
+<h3 id="steptitle4" class="steptitle submittitle">
+ <span id="stepnumber4">4.</span>
+ &nbsp;Submit
+</h3>
+<p class="taskbuttonhelp">When finished, make sure to click <b>Submit</b>.<br>Optionally, click <b>Save as Draft</b> to save changes and continue working later, or click <b>Cancel</b> to quit without saving changes.</p>
+
+<div class="taskbuttondiv_wrapper">
+<p class="taskbuttondiv" id="bottom_submitButtonRow">
+			<input class="button-2" name="bottom_Cancel" role="button" value="Cancel" onclick="return cancelSubmit();" type="button">
+			<input class="button-2" name="bottom_Save Draft" role="button" value="Save Draft" onclick="checkDupeFile('save');" type="button">
+		<input class="submit button-1" name="bottom_Submit" role="button" value="Submit" onclick=" return checkDupeFile('submit');" type="submit">
+
+</p>
+</div>
+
+</div>
+	
+</div>
+
+</form>
+
+
+   </div>
+   
+     </div>
+   </div> 
+   </div>
+   </div>  
+
+</body></html>
