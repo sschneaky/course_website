@@ -30,6 +30,9 @@ def Piazza(request):
 def Blackboard(request):
 	return render(request, "blackboard.html")
 
+def BlackboardGrades(request):
+	return render(request, "blackboardGrades.html")
+
 def Submit(request):
 	return render(request, "submit.html")
 

@@ -8,54 +8,57 @@
 		<h5><a href="#today">Next Class</a> : {{next_class.date|date:'Y-m-d'}} </h5>
 
 		<hr>
-			<div class="container-fluid">
-			<div class="row">
-				<div class="col-12">
-					<table class="table table-striped">
-						  <thead class="thead-light">
-						    <tr>
-						      <th class="col-2" scope="col">Date</th>
-						      <th class="col-2" scope="col">Lecture Topics</th>
-						      <th class="col-5" scope="col">Readings For Today</th>
-						      <th class="col-3" scope="col">Events</th>
-						    </tr>
-						  </thead>
-						  <tbody>
-						    <tr>
-						      <th scope="row"> {{next_class.date|date}} </th>
-						      <td>
-						      	{% if next_class.url %}
-						      		<a href="{{next_class.url}}">{{next_class.title}}</a>
-						      	{% else %}
-						      		{{next_class.title}}
-						      	{% endif %}
-						      </td>
-						      <td>
-						      	<ul>
-						      	{% for reading in next_class.reading_set.all %}
-						      		<li><a href="{{reading.url}}" target="_blank">{{reading.title}}</a></li>
-						      	{% endfor %}
-						      	</ul>
-						      </td>
-						      <td>
-						      	{% for event in next_class.event_set.all %}
-						      		<a href="{{event.url}}">{{event.title}}</a>
-						      	{% endfor %}
-						      	{% if next_class.reading_set.all %}
-						      		<div><a href="submit.html" target="_blank">Submit Reading: {{next_class.title}}</a></div>
-						      	{% endif %}
-						      </td>
-						    </tr> 
-						  </tbody>
-					</table>
-				</div>
-			</div>
-			</div>
+		<div class="container-fluid">
+			<table class="table table-striped">
+				  <thead class="thead-light" >
+				    <tr class="d-flex">
+				      <th class="col-2" scope="col">Date</th>
+				      <th class="col-2" scope="col">Lecture Topics</th>
+				      <th class="col-5" scope="col">Readings For Today</th>
+				      <th class="col-3" scope="col">Events</th>
+				    </tr>
+				  </thead>
+				  <tbody>
+				    <tr class="d-flex">
+				      <th scope="row" class="col-2"> {{next_class.date|date}} </th>
+				      <td class="col-2">
+				      	{% if next_class.url %}
+				      		<a href="{{next_class.url}}">{{next_class.title}}</a>
+				      	{% else %}
+				      		{{next_class.title}}
+				      	{% endif %}
+				      </td>
+				      <td class="col-5">
+				      	<ul>
+				      	{% for reading in next_class.reading_set.all %}
+				      		<li><a href="{{reading.url}}" target="_blank">{{reading.title}}</a></li>
+				      	{% endfor %}
+				      	</ul>
+				      </td>
+				      <td class="col-3">
+				      	<ul>
+				      	{% for event in next_class.event_set.all %}
+				      		<li><a href="{{event.url}}">{{event.title|upper}}</a></li>
+				      	{% endfor %}
+				      	{% if next_class.reading_set.all %}
+				      		<li><a href="submit.html" target="_blank">Submit Reading: {{next_class.title}}</a></li>
+				      	{% endif %}
+				      	</ul>
+				      </td>
+				    </tr> 
+				  </tbody>
+			</table>
+		</div>
 
 		<br>
 
 		{# Main Cal #}
-		<h3>Calendar</h3>	
+		<div class="row">
+			<h3 class="col-2">Calendar</h3>	
+			<div class="col-2 ml-auto d-flex align-items-center">
+				<a href="https://calendar.google.com/calendar/embed?src=l2psuumkngdh68nuac2f9945sc%40group.calendar.google.com&ctz=America/Phoenix" class="btn btn-outline-light btn-sm" target="_blank">Google Calendar</a>
+			</div>
+		</div>
 		<hr> 
 
 		<div class="container-fluid">
@@ -63,7 +66,7 @@
 			<div class="col-12">
 				<table class="table table-striped">
 					  <thead class="thead-light">
-					    <tr>
+					    <tr class="d-flex">
 					      <th class="col-2" scope="col">Date</th>
 					      <th class="col-2"scope="col">Lecture Topics</th>
 					      <th class="col-5"scope="col">Readings For Today</th>
@@ -72,28 +75,28 @@
 					  </thead>
 					  <tbody>
 					  	{% for cp in object_list %}
-					    <tr>
+					    <tr class="d-flex">
 					    	{% if cp == next_class %}
-					    		<th scope="row" id="today"> {{cp.date|date}} </th>
+					    		<th scope="row" class="col-2" id="today"> {{cp.date|date}} </th>
 					    	{% else %}
-					    		<td scope="row"> {{cp.date|date}} </td>
+					    		<td scope="row" class="col-2"> {{cp.date|date}} </td>
 					    	{% endif %}
 					      
-					      <td>
+					      <td class="col-2">
 					      	{% if cp.url %}
 					      		<a href="{{cp.url}}">{{cp.title}}</a>
 					      	{% else %}
 					      		{{cp.title}}
 					      	{% endif %}
 					      </td>
-					      <td>
+					      <td class="col-5">
 					      	<ul>
 					      	{% for reading in cp.reading_set.all %}
 					      		<li><a href="{{reading.url}}" target="_blank">{{reading.title}}</a></li>
 					      	{% endfor %}
 					      	</ul>
 					      </td>
-					      <td>
+					      <td class="col-3">
 					      	<ul>
 					      	{% for event in cp.event_set.all %}
 					      		<li><a href="{{event.url}}">{{event.title|upper}}</a></li>

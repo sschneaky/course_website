@@ -5,9 +5,15 @@
 	<title>HCI</title>
 	
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 	<script>
-		window.addEventListener("hashchange", function() { scrollBy(0, -100) })
+		 $(document).ready(function(){    
+		  var shiftWindow = function() { scrollBy(0, -100) };
+		  if (location.hash) shiftWindow();
+		  window.addEventListener("hashchange", shiftWindow);
+		});
  	</script>
 
 </head>
@@ -17,7 +23,7 @@
 			<!-- Header -->
 			<img class="navbar-brand" src={% static "Brookings_Seal.png" %} width="30px">
 			<div class="navbar-brand">
-				CSE 556: Into to Human Computer Interaction
+				CSE 556: Intro to Human Computer Interaction
 			</div>
 
 			<button class="navbar-toggler collapsed" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollaspe" aria-expanded="false" aria-label="Toggle navigation">

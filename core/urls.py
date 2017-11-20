@@ -25,6 +25,7 @@ urlpatterns = [
     url(r'^course', views.Course, name='course'),
     url(r'^projects', views.Projects, name='projects'),
     url(r'^piazza', views.Piazza, name='piazza'),
+    url(r'^blackboardGrades', views.BlackboardGrades, name='blackboard_grades'),
     url(r'^blackboard', views.Blackboard, name='blackboard'),
     url(r'^submit', views.Submit, name='submit'),
 ]

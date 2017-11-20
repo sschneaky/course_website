@@ -1,0 +1,149 @@
+
+<!DOCTYPE HTML ><!-- \projects\plugins\bb-social-learning\web\mybb\mybb.jsp -->
+
+
+<html  lang="en-US">
+ <head>
+  <title>My Blackboard Content &ndash; Blackboard Learn</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta id="request-method" name="request-method" content="GET">
+  <meta name="author" content="Blackboard">
+  <meta name="copyright" content="&copy; 1997-2017 Blackboard Inc. All Rights Reserved. U.S. Patent No. 7,493,396 and 7,558,853. Additional Patents Pending.">
+  <meta name="keywords" content="Blackboard">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="-1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+  <link rel="SHORTCUT ICON" type="image/x-icon" href="https://d1e7kr0efngifs.cloudfront.net/3300.2.0-rel.25+dcb5a17/ui/bb-icon2.ico">
+     <link rel="stylesheet" type="text/css" href="https://d1e7kr0efngifs.cloudfront.net/3300.2.0-rel.25+dcb5a17/common/shared.css?v=3300.2.0-rel.25+dcb5a17" id="css_0">
+
+     <link rel="stylesheet" type="text/css" href="https://d1e7kr0efngifs.cloudfront.net/3300.2.0-rel.25+dcb5a17/themes/as_2015/app_nav.css?v=3300.2.0-rel.25+dcb5a17" id="css_1">
+     <link rel="stylesheet" type="text/css" href="https://wustl.blackboard.edu/webapps/bb-social-learning-BB5842481bae004/css/if_mybb.css?v=3300.2.0-rel.25+dcb5a17" id="css_2">
+     <link rel="stylesheet" type="text/css" href="https://wustl.blackboard.edu/webapps/cloud-profiles/css/opt_in_lightbox.css?b2=3300.2.0-rel.25+dcb5a17&v=3300.2.0-rel.25+dcb5a17" id="css_3">
+     <link rel="stylesheet" type="text/css" href="https://wustl.blackboard.edu/webapps/retention/css/myblackboard_icon.css?v=3300.2.0-rel.25+dcb5a17" id="css_4">
+      <link rel="stylesheet" type="text/css" href="blackboard.css" id="css_5">
+          <style type="text/css">.topGlobalLinks a.home{background-image:url(https://d1e7kr0efngifs.cloudfront.net/3300.2.0-rel.25+dcb5a17/images/console/icons/home_0.gif)}.bottom-buttons-home a{background-image:url(https://d1e7kr0efngifs.cloudfront.net/3300.2.0-rel.25+dcb5a17/images/console/icons/home_0.gif);background-repeat:no-repeat;background-position:50% 0}.topGlobalLinks a.help{background-image:url(https://d1e7kr0efngifs.cloudfront.net/3300.2.0-rel.25+dcb5a17/images-ltr/console/icons/help_0.gif)}.bottom-buttons-help a{background-image:url(https://d1e7kr0efngifs.cloudfront.net/3300.2.0-rel.25+dcb5a17/images-ltr/console/icons/help_0.gif);background-repeat:no-repeat;background-position:50% 0}.topGlobalLinks a.logout{background-image:url(https://d1e7kr0efngifs.cloudfront.net/3300.2.0-rel.25+dcb5a17/images/console/icons/logout_0.gif)}.global-nav-bar .logout-link,.global-nav-bar .logout-link:hover,.global-nav-bar .logout-link:focus{background-image:url(https://d1e7kr0efngifs.cloudfront.net/3300.2.0-rel.25+dcb5a17/images/console/icons/logout_0.gif);background-repeat:no-repeat;background-position:50% 0}</style>
+       <link rel="stylesheet" type="text/css" media="print" href="https://d1e7kr0efngifs.cloudfront.net/3300.2.0-rel.25+dcb5a17/ui/styles/print.css?v=3300.2.0-rel.25+dcb5a17">
+    <script type="text/javascript" src="https://d1e7kr0efngifs.cloudfront.net/3300.2.0-rel.25+dcb5a17/javascript/i18n.js?v=3300.2.0-rel.25+dcb5a17"></script>
+      <script language='javascript' type='text/javascript'>
+
+
+
+</script>
+
+
+
+    </head>
+  <body>
+
+<h1 class="hideoff hideFromQuickLinks">Open Quick Links</h1><div id=quick_links_wrap><a id=quick_links_lightbox_link href="#" onclick="quickLinks.lightboxHelper.toggleLightbox(); return false;" role=button aria-haspopup=true tabindex=1 title="Open&#x20;Quick&#x20;Links">Quick Links</a></div><div id=quickLinksLightboxDiv class=hideoff aria-hidden=true style="display:none"><div class=ax-content><div class=content-lite><div id=quick_links_landmarks_section><h2 class=hideFromQuickLinks>Page Landmarks</h2><ul class=shortcut-list id=quick_links_landmark_list></ul></div><div id=quick_links_headings_section><h2 class=hideFromQuickLinks>Content Outline</h2><ul class=shortcut-list id=quick_links_heading_list></ul></div></div><div id=quick_links_hotkeys_section class=legend><h2 class=hideFromQuickLinks>Keyboard Shortcuts</h2><ul class=keycombos id=quick_links_hotkey_list></ul></div></div></div><h1 class="hideoff hideFromQuickLinks"></h1><div class=global-nav-bar-wrap><div class=global-nav-bar-wrap-mobile-nav><button class="hamburger hamburger--squeeze" type=button><span class=hamburger-box><span class=hamburger-inner></span></span></button></div><div class="global-nav-bar logout"><a id="topframe.logout.label" href="/webapps/login/?action=logout" target=_top class="nav-link logout-link" title=Logout> Logout</a></div><div id=global-nav class=global-nav-bar role=navigation data-preview=false><div class=hideoff>Global Menu</div><a id=global-nav-link class="nav-link u_floatThis-right" href="#global-nav-flyout" aria-haspopup=true tabindex=1 accesskey=m role=navigation title="Open&#x20;Global&#x20;Navigation&#x20;Menu"><img src="https://d1e7kr0efngifs.cloudfront.net/3300.2.0-rel.25+dcb5a17/images/ci/ng/avatar_150.gif" alt="" id=global-avatar dataToolTitle="User Avatar Image" class=global-top-avatar /> Student McStudentFace<span id=badgeTotal style="visibility: hidden" title=""><span class=hideoff id=badgeAXLabel>Activity Updates</span><span class=badge id=badgeTotalCount title=""></span></span><img src="https://d1e7kr0efngifs.cloudfront.net/3300.2.0-rel.25+dcb5a17/images/ci/mybb/arrowDown-topnav.png" alt="Expand Global Nav" id=global-toggle-img class=global-toggle /></a><div id=global-nav-flyout class=flyout-menu style="display: none;" role=application><ul id=bottomButtons class=bottom-buttons><li class=bottom-buttons-home><a id="topframe.home.label" href="https://blackboard.wustl.edu" target=_blank class=home title=Home role=menuitem> Home</a></li><li class=bottom-buttons-help><a id="topframe.help.label" href="#" onClick="globalNavigation.openHelpWindow('https://bb.wustl.edu/webapps/portal/frameset.jsp?tab_tab_group_id=_12_1');" class=help title=Help role=menuitem> Help</a></li></ul></div></div></div>
+<!-- global_nav.jsp -->
+
+<div id="globalNavPageNavArea">
+    <table class="bouncer" summary="Top frame table" role="presentation">
+      <tr>
+        <td>
+          <div class="topTabs bgBanner" id="topTabs">
+
+            <div class="brandingImgWrap">
+              <a href="https://blackboard.wustl.edu" target="_blank" title="Washington University">
+                <img  src="https://wustl.blackboard.com/branding/_1_1/wulogo-transparent.png"  alt="Washington University" title="Washington University" class="bannerImage"/>
+</a>
+            </div>
+
+            <div class="tabWrapper-right">
+              <H2 CLASS="hideoff">Top Frame Tabs</H2>
+              <table class="appTabs transparent" id="appTabList" summary="Tab List table" role="presentation">
+                <tr>
+                 <td id="My Blackboard"  >
+                      <a href="/webapps/portal/execute/tabs/tabAction?tab_tab_group_id=_1_1" TARGET="_top"><span>My Blackboard</span>
+                        <span class="hideoff"> Tab 1 of 4</span>
+                      </a>
+                    </td>
+                  <td id="Courses.label"  >
+                      <a href="/webapps/portal/execute/tabs/tabAction?tab_tab_group_id=_2_1" TARGET="_top"><span>Courses</span>
+                        <span class="hideoff"> Tab 2 of 4</span>
+                      </a>
+                    </td>
+                  <td id="Organizations"  >
+                      <a href="/webapps/portal/execute/tabs/tabAction?tab_tab_group_id=_3_1" TARGET="_top"><span>Organizations</span>
+                        <span class="hideoff"> Tab 3 of 4</span>
+                      </a>
+                    </td>
+                  <td id="bbcms.label"  >
+                      <a href="/webapps/portal/execute/tabs/tabAction?tab_tab_group_id=_11_1" TARGET="_top"><span>Content Collection</span>
+                        <span class="hideoff"> Tab 4 of 4</span>
+                      </a>
+                    </td>
+                  </tr>
+              </table>
+              <div class="clearfloats"></div>
+            </div>
+            </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+
+  <!-- end navigation rail -->
+
+
+  <!-- begin canvas -->
+
+
+
+    <div class="detail-heading" id="streamDetailHeaderRight">
+                <br>
+
+          <div>
+              <a onclick="stream.loadContentFrame('https://wustl.blackboard.com/webapps/blackboard/execute/courseMain?course_id=_173884_1'); return false;"
+           id="goToCourseContent" style="display:none" class="stream_gotoitem"></a>
+                  <h2 id="streamDetailHeaderRightClickable" class="streamHeader"><a>Grades: FL2017.E81.CSE.556A.01 - Human-Computer Interaction Methods</a></h2>
+                  </div>
+             </div>
+          </div>
+          <br><br>
+          <div class="row">
+            <div class="col-6">
+
+              </div>
+            <div class="col-6">
+          <table class="table table-striped">
+                      <thead class="thead-light">
+                        <tr>
+                          <th scope="col">Item</th>
+                          <th scope="col">Last Activity</th>
+                          <th scope="col">Grade</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                        <td scope="col">Project Pitch</td>
+                          <td scope="col">September 12th</td>
+                          <td scope="col">10/10</td>
+                        </tr>
+                        <tr>
+                        <td scope="col">Reading Summary 1</td>
+                          <td scope="col">September 17th</td>
+                          <td scope="col">10/10</td>
+                        </tr>
+                        <tr>
+                        <td scope="col">Reading Summary 2</td>
+                          <td scope="col">September 14th</td>
+                          <td scope="col">10/10</td>
+                        </tr>
+                        <tr>
+                        <td scope="col">Milestone 1</td>
+                          <td scope="col">September 22th</td>
+                          <td scope="col">93/100</td>
+                        </tr>
+
+                    </tbody>
+                    </table>
+                    </div>
+                </div>
+
+</body>
+</html>
