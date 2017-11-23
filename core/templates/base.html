@@ -4,10 +4,12 @@
 <head>
 	<title>HCI</title>
 	
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+	<link rel="stylesheet" href={% static "bootstrap.min.css" %}>
+	<link rel="stylesheet" href={% static "bootstrap.min.css.map" %}>
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
+	{# Shift widow down #}
 	<script>
 		 $(document).ready(function(){    
 		  var shiftWindow = function() { scrollBy(0, -100) };
@@ -50,6 +52,30 @@
 						<a class="nav-link" href="projects.html">Project</a>
 					</li>
 
+					{# Projects Dropdown #}
+					<!-- 
+					<li class="nav-item dropdown 
+						{% if 'projects.html' in request.get_full_path  %}
+							active
+						{% endif %}">
+						<a class="nav-link dropdown-toggle" id="dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Project</a>
+						<div class="dropdown-menu " aria-labelledby="dropdown">
+			              <a class="dropdown-item" href="
+			              projects.html">Overview</a>
+			              <a class="dropdown-item" href="
+			              projects.html#pitch">Project Pitch</a>
+			              <a class="dropdown-item" href="
+			              projects.html#milestone1">Milestone 1</a>
+			              <a class="dropdown-item" href="
+			              projects.html#milestone2">Milestone 2</a>
+			              <a class="dropdown-item" href="
+			              projects.html#milestone3">Milestone 3</a>
+			              <a class="dropdown-item" href="
+			              projects.html#milestone4">Milestone 4</a>
+			            </div>
+					</li>
+					-->
+
 					{# Course Dropdown #}
 					<li class="nav-item dropdown 
 						{% if 'course' in request.get_full_path  %}
@@ -82,10 +108,8 @@
 		{% endblock core %}
 
 	</main>
-
-		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+		<script src={% static "bootstrap.min.js" %}></script>
 
 </body>
 </html>
