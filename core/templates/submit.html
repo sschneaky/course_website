@@ -1,3 +1,4 @@
+{% load static %}
 <html lang="en-US"><head>
   <title>Upload Assignment:</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -354,7 +355,7 @@ _init_bundle_LOCALE_SETTINGS();
                 </li>
                 
               <li class="grades">
-                  <a id="MyGradesOnMyBb_____MyGradesTool" href="/webapps/bb-social-learning-BB5842481bae004/execute/mybb?cmd=display&amp;toolId=MyGradesOnMyBb_____MyGradesTool" title="My Grades" role="menuitem">
+                  <a id="MyGradesOnMyBb_____MyGradesTool" href={% url 'blackboard_grades' %} title="My Grades" role="menuitem">
                   
                     <!-- Use hidden text so screenreaders will announce label for badge - tool activity update. -->
                       <span class="hideoff" data-tool-title="My Grades" id="MyGradesOnMyBb_____MyGradesTool_AXLabel"></span>
@@ -489,7 +490,7 @@ _init_bundle_LOCALE_SETTINGS();
   
             <div class="brandingImgWrap">
               <a href="https://blackboard.wustl.edu" target="_blank" title="Washington University">
-                <img src="/branding/_1_1/wulogo-transparent.png" alt="Washington University" title="Washington University" class="bannerImage">
+                <img src={% static "wulogo-transparent.png" %} alt="Washington University" title="Washington University" class="bannerImage">
 </a>
             </div>
   

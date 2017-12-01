@@ -18,8 +18,8 @@ class CalendarListView(ListView):
 
 	template_name = 'calendar.html'
 
-def Projects(request):
-	return render(request, "projects.html")
+def Project(request):
+	return render(request, "project.html")
 
 def Course(request):
 	return render(request, "course.html")

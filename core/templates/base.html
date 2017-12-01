@@ -41,19 +41,20 @@
 						<a class="nav-link 
 						{% if 'calendar' in request.get_full_path %}
 							active
-						{% endif %}" href="calendar.html">Calendar</a>
+						{% endif %}" href={% url 'calendar' %}>Calendar</a>
 					</li>
 
-					{# Porjects #}
-					<li class="nav-item 
-						{% if 'projects' in request.get_full_path  %}
+					{# Projects #}
+					<li class="nav-item">
+						<a class="nav-link 
+						{% if 'project' in request.get_full_path %}
 							active
-						{% endif %}">
-						<a class="nav-link" href="projects.html">Project</a>
+						{% endif %}" href={% url 'project' %}>Project</a>
 					</li>
 
+					
 					{# Projects Dropdown #}
-					<!-- 
+					{% comment %}
 					<li class="nav-item dropdown 
 						{% if 'projects.html' in request.get_full_path  %}
 							active
@@ -61,20 +62,21 @@
 						<a class="nav-link dropdown-toggle" id="dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Project</a>
 						<div class="dropdown-menu " aria-labelledby="dropdown">
 			              <a class="dropdown-item" href="
-			              projects.html">Overview</a>
+			              {% url 'project' %}">Overview</a>
 			              <a class="dropdown-item" href="
-			              projects.html#pitch">Project Pitch</a>
+			              {% url 'project' %}#pitch">Project Pitch</a>
 			              <a class="dropdown-item" href="
-			              projects.html#milestone1">Milestone 1</a>
+			              {% url 'project' %}#milestone1">Milestone 1</a>
 			              <a class="dropdown-item" href="
-			              projects.html#milestone2">Milestone 2</a>
+			              {% url 'project' %}#milestone2">Milestone 2</a>
 			              <a class="dropdown-item" href="
-			              projects.html#milestone3">Milestone 3</a>
+			              {% url 'project' %}#milestone3">Milestone 3</a>
 			              <a class="dropdown-item" href="
-			              projects.html#milestone4">Milestone 4</a>
+			              {% url 'project' %}#milestone4">Milestone 4</a>
 			            </div>
 					</li>
-					-->
+					{% endcomment %}
+
 
 					{# Course Dropdown #}
 					<li class="nav-item dropdown 
@@ -83,18 +85,18 @@
 						{% endif %}">
 						<a class="nav-link dropdown-toggle" id="dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Course</a>
 						<div class="dropdown-menu " aria-labelledby="dropdown">
-			              <a class="dropdown-item" href="course.html">Course Details</a>
-			              <a class="dropdown-item" href="course.html#hours">Office and TA Hours</a>
-			              <a class="dropdown-item" href="course.html#grades">Grading</a>
+			              <a class="dropdown-item" href="{% url 'course' %}">Course Details</a>
+			              <a class="dropdown-item" href="{% url 'course' %}#hours">Office and TA Hours</a>
+			              <a class="dropdown-item" href="{% url 'course' %}#grades">Grading</a>
 			            </div>
 					</li>
 
 					{# Piazza and BlackBoard #}
 					<li class="nav-item">
-						<a class="nav-link" href="piazza.html" target="_blank">Piazza</a>
+						<a class="nav-link" href="{% url 'piazza' %}" target="_blank">Piazza</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="blackboard.html" target="_blank">BlackBoard</a>
+						<a class="nav-link" href="{% url 'blackboard' %}" target="_blank">BlackBoard</a>
 					</li>
 				</ul>
 			</div>
