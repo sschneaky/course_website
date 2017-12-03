@@ -41,7 +41,7 @@
 				      		<li><a href="{{event.url}}">{{event.title|upper}}</a></li>
 				      	{% endfor %}
 				      	{% if next_class.reading_set.all %}
-				      		<li><a href="submit.html" target="_blank">Submit Reading: {{next_class.title}}</a></li>
+				      		<li><a href="{% url 'submit' %}" target="_blank">Submit Reading: {{next_class.title}}</a></li>
 				      	{% endif %}
 				      	</ul>
 				      </td>

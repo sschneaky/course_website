@@ -19,7 +19,7 @@ class ClassPeriod(models.Model):
 
 class Reading(models.Model):
 
-	class_period = models.ForeignKey(ClassPeriod)
+	class_period = models.ForeignKey(ClassPeriod. on_delete=models.PROTECT)
 	title = title = models.CharField(max_length=100, null=True, blank=True)
 	url = models.CharField(max_length=200, null=True, blank=True)
 
@@ -29,7 +29,7 @@ class Reading(models.Model):
 
 
 class Event(models.Model):
-	class_period = models.ForeignKey(ClassPeriod)
+	class_period = models.ForeignKey(ClassPeriod, on_delete=models.PROTECT)
 	title = models.CharField(max_length=100, null=True, blank=True)
 	url = models.CharField(max_length=200, null=True, blank=True)
 
