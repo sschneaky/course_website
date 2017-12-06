@@ -21,7 +21,7 @@
 </head>
 <body style="padding-top: 100px">
 	<nav class="navbar navbar-expand-lg py-3 fixed-top navbar-light bg-light">
-		<div class="container">
+		<div class="container-fluid">
 			<!-- Header -->
 			<img class="navbar-brand" src={% static "Brookings_Seal.png" %} width="30px">
 			<div class="navbar-brand">
@@ -45,12 +45,14 @@
 					</li>
 
 					{# Projects #}
+					
 					<li class="nav-item">
 						<a class="nav-link 
 						{% if 'project' in request.get_full_path %}
 							active
 						{% endif %}" href={% url 'project' %}>Project</a>
 					</li>
+					
 
 					
 					{# Projects Dropdown #}
@@ -76,6 +78,7 @@
 			            </div>
 					</li>
 					{% endcomment %}
+					
 
 
 					{# Course Dropdown #}
