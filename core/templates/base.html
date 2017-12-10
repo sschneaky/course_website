@@ -45,18 +45,18 @@
 					</li>
 
 					{# Projects #}
-					
+					{% comment %}
 					<li class="nav-item">
 						<a class="nav-link 
 						{% if 'project' in request.get_full_path %}
 							active
 						{% endif %}" href={% url 'project' %}>Project</a>
 					</li>
-					
+					{% endcomment %}
 
 					
 					{# Projects Dropdown #}
-					{% comment %}
+					
 					<li class="nav-item dropdown 
 						{% if 'projects.html' in request.get_full_path  %}
 							active
@@ -77,7 +77,7 @@
 			              {% url 'project' %}#milestone4">Milestone 4</a>
 			            </div>
 					</li>
-					{% endcomment %}
+					
 					
 
 
