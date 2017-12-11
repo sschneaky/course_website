@@ -8,9 +8,9 @@
 		<h5><a href="#today">Next Class</a> : {{next_class.date|date:'Y-m-d'}} </h5>
 
 		<hr>
-		<div class="container-fluid">
+		<div class="container-fluid"><div class="card">
 			<table class="table">
-				  <thead class="thead-light" >
+				  <thead class="thead-dark">
 				    <tr class="d-flex">
 				      <th class="col-2" scope="col">Date</th>
 				      <th class="col-2" scope="col">Lecture Topics</th>
@@ -51,7 +51,7 @@
 				    </tr> 
 				  </tbody>
 			</table>
-		</div>
+		</div></div>
 
 		<br>
 
@@ -66,65 +66,61 @@
 		</div>
 		<hr> 
 
-		<div class="container-fluid">
-		<div class="row">
-			<div class="col-12">
-				<table class="table table-striped">
-					  <thead class="thead-light">
-					    <tr class="d-flex table-primary">
-					      <th class="col-2" scope="col">Date</th>
-					      <th class="col-2"scope="col">Lecture Topics</th>
-					      <th class="col-5"scope="col">Readings For Today</th>
-					      <th class="col-3" scope="col">Events</th>
-					    </tr>
-					  </thead>
-					  <tbody>
-					  	{% for cp in object_list %}
-					    <tr class="d-flex">
-					    	{% if cp == next_class %}
-					    		<th scope="row" class="col-2" id="today"> {{cp.date|date}} </th>
-					    	{% else %}
-					    		<td scope="row" class="col-2"> {{cp.date|date}} </td>
-					    	{% endif %}
-					      
-					      <td class="col-2">
-					      	{% if cp.url %}
-					      		<a href="{{cp.url}}">{{cp.title}}</a>
-					      	{% else %}
-					      		{{cp.title}}
-					      	{% endif %}
-					      </td>
-					      <td class="col-5">
-					      	<ul>
-					      	{% for reading in cp.reading_set.all %}
-					      		<li><a href="{{reading.url}}" target="_blank">{{reading.title}}</a></li>
-					      	{% endfor %}
-					      	{% if not cp.reading_set.all %}
-					      		<li>No Readings</li>
-					      	{% endif %}
-					      	</ul>
-					      </td>
-					      <td class="col-3">
-					      	<ul>
-					      	{% for event in cp.event_set.all %}
-					      		<li><a href="{{event.url}}">
-					      			<strong>{{event.title|upper}}</strong>
-					      		</a></li>
-					      	{% endfor %}
-					      	{% if cp.reading_set.all %}
-					      		<li><a href="{% url 'submit' %}" target="_blank">Submit Reading: <br> {{cp.title}}</a></li>
-					      	{% endif %}
+		<div class="container-fluid"><div class="card">
+			<table class="table table-striped">
+				  <thead class="thead-dark">
+				    <tr class="d-flex">
+				      <th class="col-2" scope="col">Date</th>
+				      <th class="col-2"scope="col">Lecture Topics</th>
+				      <th class="col-5"scope="col">Readings For Today</th>
+				      <th class="col-3" scope="col">Events</th>
+				    </tr>
+				  </thead>
+				  <tbody>
+				  	{% for cp in object_list %}
+				    <tr class="d-flex">
+				    	{% if cp == next_class %}
+				    		<th scope="row" class="col-2" id="today"> {{cp.date|date}} </th>
+				    	{% else %}
+				    		<td scope="row" class="col-2"> {{cp.date|date}} </td>
+				    	{% endif %}
+				      
+				      <td class="col-2">
+				      	{% if cp.url %}
+				      		<a href="{{cp.url}}">{{cp.title}}</a>
+				      	{% else %}
+				      		{{cp.title}}
+				      	{% endif %}
+				      </td>
+				      <td class="col-5">
+				      	<ul>
+				      	{% for reading in cp.reading_set.all %}
+				      		<li><a href="{{reading.url}}" target="_blank">{{reading.title}}</a></li>
+				      	{% endfor %}
+				      	{% if not cp.reading_set.all %}
+				      		<li>No Readings</li>
+				      	{% endif %}
+				      	</ul>
+				      </td>
+				      <td class="col-3">
+				      	<ul>
+				      	{% for event in cp.event_set.all %}
+				      		<li><a href="{{event.url}}">
+				      			<strong>{{event.title|upper}}</strong>
+				      		</a></li>
+				      	{% endfor %}
+				      	{% if cp.reading_set.all %}
+				      		<li><a href="{% url 'submit' %}" target="_blank">Submit Reading: <br> {{cp.title}}</a></li>
+				      	{% endif %}
 
-					      	</ul>
-					      </td>
-					    </tr>
-						{% endfor %}		
-					    
-					  </tbody>
-				</table>
-			</div>
-		</div>
-		</div>
+				      	</ul>
+				      </td>
+				    </tr>
+					{% endfor %}		
+				    
+				  </tbody>
+			</table>
+		</div></div>
 	
 {% endblock core %}
 		
