@@ -112,7 +112,7 @@
 					      		</a></li>
 					      	{% endfor %}
 					      	{% if cp.reading_set.all %}
-					      		<li><a href="{% url 'submit' %}" target="_blank">Submit Reading: {{cp.title}}</a></li>
+					      		<li><a href="{% url 'submit' %}" target="_blank">Submit Reading: <br> {{cp.title}}</a></li>
 					      	{% endif %}
 
 					      	</ul>
